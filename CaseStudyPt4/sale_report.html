@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaJam Coffee House</title>
+	  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<!-- <h1>JavaJam Coffee House</h1> -->
+		<img src="media/title.PNG" style="padding-left: 10px; width: 500px" alt="javajam coffee house">
+	</header>
+	<div id="bodyrow">
+		<div id="leftcolumn">	
+			<nav>
+				<b>
+					<a href="index.html">Home</a> <br/>
+					<a href="menu.php">Menu</a>  <br/>
+					<a href="music.html">Music</a>  <br/>
+					<a href="jobs.html">Jobs</a>  <br/>
+					<hr/>
+					<a href="price_update.php">Price Update</a>  <br/>
+					<a href="sale_report.html">Sales Report</a>  <br/>
+				</b>
+			</nav>
+		</div>
+	
+		<div id="rightcolumn" class="content">
+		
+			<h2>Click to generate daily sales report</h2>
+			<input type="checkbox"  onclick='window.location.assign("dollars-by-product.php")'/>  Total dollars sales by product category
+			<br/>
+			<input type="checkbox"  onclick='window.location.assign("quantities-by-product.php")'/>  Sales quantities by product category
+			<br/><br/><br/><br/>
+	</div>
+	
+	</div>
+
+
+	<footer>
+		<small><i>		
+		Copyright &copy; 2014 JavaJam Coffee House<br/>
+		<a href="mailto:cat@le.com">cat@le.com</a>
+		</i></small>
+	</footer>
+</div>
+
+</body>
+</html>

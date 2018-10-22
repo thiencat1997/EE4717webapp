@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaJam Coffee House</title>
+	  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<!-- <h1>JavaJam Coffee House</h1> -->
+		<img src="media/title.PNG" style="padding-left: 10px; width: 500px" alt="javajam coffee house">
+	</header>
+	<div id="bodyrow">
+		<div id="leftcolumn">
+			<nav>
+				<b>
+					<a href="index.html">Home</a> <br/>
+					<a href="menu.php">Menu</a>  <br/>
+					<a href="music.html">Music</a>  <br/>
+					<a href="jobs.html">Jobs</a>  <br/>
+					<hr/>
+					<a href="price_update.php">Price Update</a>  <br/>
+					<a href="sale_report.html">Sales Report</a>  <br/>
+				</b>
+			</nav>
+		</div>
+		
+		<div id="rightcolumn" class="content">
+			<h2>Jobs at JavaJam</h2>
+			<p>Want to work at JavaJam? Fill out the form below to start your application. Required fields are marked with an astersk *</p>
+
+			<form method="post" action="show_post.php" onsubmit="return validateForm()" id="my_form"></form>
+			<table>
+				<tr>
+					<td>
+			  		<label for="myName">*Name:</label>
+			  	</td>
+					<td>
+			  			<input type="text" name="myName" id="myName" onchange="checkName()" form="my_form" required/>
+			  	</td>
+			  </tr>
+
+		  	<tr>
+					<td>
+		  			<label for="myEmail">*E-mail:</label>
+		  		</td>
+					<td>
+		  			<input type="email" name="myEmail" id="myEmail" onchange="checkEmail()" form="my_form" required/>
+		  		</td>
+		  	</tr>
+
+			  	<tr>
+							<td>
+					  <label for="startDate">Start Date:</label>
+					  </td>
+
+							<td>
+					  <input type="date" name="startDate" onchange="checkDate()" id="startDate" form="my_form"/>
+					  </td>
+				  </tr>
+
+			  <tr>
+					<td>
+			  <label for="myComments">*Experience:</label>
+			  </td>
+					<td>
+			  <textarea name="myComments" id="myComments" rows="2" cols="20" form="my_form" required></textarea>
+			  </td>
+			  </tr>
+
+			  <tr>	 
+					<td> 	
+
+			  <input id="mySubmit" type="submit" value="Submit" form="my_form">
+					</td>
+			  </tr>
+			</table>
+		</div>
+	</div>
+
+	<footer>
+		<small><i>		
+		Copyright &copy; 2014 JavaJam Coffee House<br/>
+		<a href="mailto:cat@le.com">cat@le.com</a>
+		</i></small>
+	</footer>
+</div>
+</body>
+
+<script>
+	function checkName() {
+	    var x = document.forms["my_form"]["myName"].value;
+		var nameRGEXnum = RegExp('^[^0-9]+$');
+		var nameRGEXspace = RegExp('\\w\\s\\w');
+		var nameResult = nameRGEXspace.test(x) && !!nameRGEXnum.test(x);
+		console.log(nameRGEXspace.test(x));
+	    if (!nameResult) {
+	        alert("Please enter valid name");
+			return false;
+	    }
+	}
+		
+	function checkEmail() {
+		var x = document.forms["my_form"]["myEmail"].value;
+		var emailRGEX = RegExp('^[a-zA-Z.-]+@([a-zA-Z0-9-]+\.){1,3}[a-zA-Z]{2,3}$');
+	    if ( !emailRGEX.test(x) ) {
+	        alert("Please enter valid email");
+			return false;
+	    }	
+	}	
+
+	function checkDate() {		
+		var selectedDate = Date.parse(document.forms["my_form"]["startDate"].value);
+		var now = new Date();
+		if ( selectedDate < now ) {
+			alert("Date must be in the future");
+			return false;
+		}
+	}
+	
+	function validateForm(){
+		checkName();
+		checkEmail();
+		checkDate();
+	}
+	
+</script>
+
+</html>
