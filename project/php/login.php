@@ -12,14 +12,14 @@
     }
     //else
     //  echo "connected successfully";
-    
+
     $connectdb = mysqli_select_db($conn, 'users');
 
-    $user=$_POST['user'];
+    /*$user=$_POST['user'];
     $password=$_POST['pwd'];
     $query="select * from users where Username=$user";
-    $run=mysqli_query($conn,$query);
-        
+    $run=mysqli_query($conn,$query);*/
+
         $user=$_POST['user'];
         $password=$_POST['pwd'];
         $query="select * from users where Username='$user' and Password='$password'";
@@ -29,13 +29,13 @@
             //echo "<script> window.open('index.php','_self')</script>";
             $message = "success";
             //echo "<script type='text/javascript'>alert('$message');</script>";
-            header("Location: ../clinic/status.html");
+            header("Location: ./status.html");
             $_SESSION['user']=$user;
         } else {
             //echo"<p>invalid username or password!</p>";
             $message = "No";
             //echo "<script type='text/javascript'>alert('$message');</script>";
-            header("Location: ../clinic/register.php");
+            header("Location: ./register.php");
         }
         echo $message;
 ?>
