@@ -1,0 +1,73 @@
+
+body {font-family:Verdana, Arial, sans-serif;
+      background-color: #F5EFB8;
+}
+#bodyrow{
+	color: #380C09; 
+	background-color: #E2D2B0;	
+}
+#wrapper { background-color: #F5EFB8; 
+           color: #380C09;
+           width: 70%;
+		   margin: auto;
+           min-width:1000px;
+    box-shadow: 3px 3px;
+} 
+#leftcolumn { float: left;
+	          width: 150px;
+			  text-align: center;
+			  color: #A58366;
+			  padding-top: 50px;
+			  padding-bottom: 100px;
+} 
+#rightcolumn { margin-left: 150px;
+               background-color: #F5F5DC;
+			   padding-bottom: 50px;
+               color: #2E0000;
+} 
+header{ font-family:Comic Sans MS, Arial, sans-serif;
+		background-color: #D2B48C;
+        color: #976432; 
+        font-size: 150%; 
+        padding: 5px 10px 5px 200px;		
+		text-shadow: 5px 5px #380C09;
+
+}
+.content {padding: 20px 20px 0 20px; 
+}
+
+
+footer {
+		background-color: #D2B48C;
+		font-size:70%;
+         text-align: center;
+		 clear: right;
+         padding-bottom:20px;
+         padding-top:20px;
+}	
+nav ul { list-style-type: none;
+}
+nav a {text-decoration: none;
+			  color: #7A5240;
+}
+
+a{  color: #380C09;}
+
+ul .address{list-style-type: none; }
+
+li::before {
+  content: '\2022';
+  color:  #E2D2B0;
+  padding: 10px;
+  margin-left: -25px;
+  text-shadow: 1px 1px 5px brown;
+}
+
+.stripe tr:nth-child(odd) {background-color: #D2B48C;}
+
+table td{ padding: 10px}
+
+label { display: block;text-align: right; }34
+
+
+
