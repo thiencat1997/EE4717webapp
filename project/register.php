@@ -187,7 +187,7 @@
                   </tr>
                   <tr>
                     <td colspan="2" align="right">
-                      <input type="submit" name="register" value="register" form="register_form" onclick="ShowAlert()"></input>
+                      <input type="submit" name="register" value="register" form="register_form" onsubmit="ShowAlert()"></input>
                     </td>
                   </tr>
                 </table>

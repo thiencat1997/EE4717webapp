@@ -3,6 +3,7 @@
     <head>
         <title>Check Booking Status</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
     </head>
 
 <?php
@@ -20,12 +21,12 @@
     }
     //else
     //  echo "connected successfully";
-    
+
     $connectdb = mysqli_select_db($conn, 'booking');
 
     $display = "SELECT * FROM booking WHERE UserID = ";
     $result = mysqli_query($conn, $display);
-    
+
     while ($row = mysql_fetch_array($query)) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
@@ -67,7 +68,7 @@
                }
 
             ?>
-                
+
                 <input type="Submit" name="cancel" value="Cancel">
                 <input type="Submit" name="reschedule" value="Reschedule">
             </div>
