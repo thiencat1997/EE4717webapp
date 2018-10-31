@@ -119,21 +119,6 @@
                       </tr>
                     </table>
                   </div>
-                   <?php
-                   if (isset($_Post['user'])){
-                        $user=$_POST['user'];
-                        $password=$_POST['pwd'];
-                        $query="select * from users where Username='$user' and Password='$password'";
-                        $run=mysqli_query($conn,$query);
-                        if(mysqli_num_rows($run)>0) {
-                            echo"<p>login successfully</p>";
-                            //echo "<script> window.open('index.php','_self')</script>";
-                            $_SESSION['user']=$user;
-                        } else {
-                            echo"<p>invalid username or password!</p>";
-                        }
-                    }
-                ?>
                 </form>
 
             </div>
