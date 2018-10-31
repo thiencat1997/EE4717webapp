@@ -13,7 +13,7 @@
     }
     //else
     //  echo "connected successfully";
-    
+
     $connectdb = mysqli_select_db($conn, 'users');
 
     $title=$_POST['title'];
