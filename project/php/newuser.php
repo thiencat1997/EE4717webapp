@@ -28,5 +28,5 @@
     $query = "INSERT INTO users (Title, Firstname, Lastname, Username, Password, Email, Phone) VALUES ('$title', '$firstname', '$lastname', '$username', '$hash', '$email', '$phone')";
     $result = mysqli_query($conn, $query);
 
-    header('location: ../clinic/register.html');
+    header('location: ../register.php');
 ?>

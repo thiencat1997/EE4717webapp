@@ -4,8 +4,6 @@
     $password = "f31ee";
     $dbname = "f31ee";
 
-    echo "hello";
-
     // Create connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);
     // Check connection
@@ -19,12 +17,8 @@
 
     $user=$_POST['user'];
     $password=$_POST['pwd'];
-    $query="select * from users where Username='$user' and Password='$password'";
+    $query="select * from users where Username=$user";
     $run=mysqli_query($conn,$query);
-    echo "hello";
-    
-    if (isset($_Post['user'])){
-    echo "hello";
         
         $user=$_POST['user'];
         $password=$_POST['pwd'];
@@ -43,5 +37,5 @@
             //echo "<script type='text/javascript'>alert('$message');</script>";
             header("Location: ../clinic/register.php");
         }
-    }
+        echo $message;
 ?>
