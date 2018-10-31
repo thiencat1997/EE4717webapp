@@ -3,27 +3,28 @@
     <head>
         <title>Clinic User Page</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
         <script type = "text/javascript"  src = "form_validation.js" ></script>
         <style>
             body {font-family:Verdana, Arial, sans-serif;
                   background-color: #9ebdef;
             }
-            #wrapper { background-color: #b3c7e6; 
+            #wrapper { background-color: #b3c7e6;
                        color: #000066;
                        width: 80%;
                        margin: auto;
                        min-width:850px;
-            } 
+            }
             #leftcolumn { float: left;
                           width: 32%;
                           background-color: white;
-            } 
+            }
             #rightcolumn { margin-left: 35%;
                            background-color: #bfedef;
                            color: #000000;
-            } 
-            .content {padding: 20px 20px 0 20px; 
-            } 
+            }
+            .content {padding: 20px 20px 0 20px;
+            }
             #floatright { margin: 10px;
                          float: right;
             }
@@ -31,7 +32,7 @@
                      text-align: center;
                      clear: right;
                      padding-bottom:20px;
-            }   
+            }
         </style>
     </head>
 <?php
@@ -48,14 +49,14 @@
     }
     //else
     //  echo "connected successfully";
-    
+
     $connectdb = mysqli_select_db($conn, 'users');
 
 ?>
 
 
     <body>
-      
+
         <div id="wrapper">
             <header>
                 <h1>user registeration page</h1>
