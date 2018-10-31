@@ -11,7 +11,7 @@ body,footer {
 }
 
 .wrapper {
-  max-width: 1500px;
+  /*max-width: 1500px;*/
   margin: auto;
   width: 80%;
 }

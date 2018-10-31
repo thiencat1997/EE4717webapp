@@ -3,7 +3,7 @@
     <head>
         <title>User Login/register</title>
         <meta charset="utf-8">
-        <link rel="registerstylesheet" href="registerstyle.css">
+        <link rel="stylesheet" href="style.css">
         <script type = "text/javascript"  src = "form_validation.js" ></script>
         <!---<style>
             body {font-family:Verdana, Arial, sans-serif;
