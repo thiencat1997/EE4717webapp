@@ -16,6 +16,12 @@ body,footer {
   width: 80%;
 }
 
+.container {
+  max-width: 1500px;
+  margin: auto;
+}
+
+
 .leftcolumn {
   float: left;
   width: 32%;

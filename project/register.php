@@ -72,16 +72,17 @@
 				</ul>
 			</nav>
 
-        <div class="wrapper">
+        <div class="wrapper row">
+
 
             <header>
                 <h1>user registeration page</h1>
             </header>
-            <div class="leftcolumn">
+            <div class=" column2">
               <h2>User Login</h2>
 
                 <form action="php/login.php" method="POST" id="login_form">
-                  <div class="container">
+                  <div class="container ">
                     <table>
                       <tr>
                         <td>Username:</td>
@@ -136,7 +137,7 @@
                 </form>
 
             </div>
-            <div class="rightcolumn">
+            <div class="column2">
               <h2>Registeration</h2>
               <form action="./php/newuser.php" method="POST" onsubmit="form_validate()" id="register_form">
                 <table>
