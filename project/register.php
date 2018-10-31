@@ -3,7 +3,7 @@
     <head>
         <title>User Login/register</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="registerstyle.css">
+        <link rel="registerstylesheet" href="registerstyle.css">
         <script type = "text/javascript"  src = "form_validation.js" ></script>
         <!---<style>
             body {font-family:Verdana, Arial, sans-serif;
@@ -56,29 +56,27 @@
 
 
     <body>
-      <nav>
-				<ul>
-						<li ><a href="index.html" style="text-align:left">
-							<img src="media/logo.png" height="100%" width= "100%">
-						</a> </li>
-					  	<li style="float:right"><a class="button" href="login.html" style="padding: 15px; width: 150px">Login</a></li>
-
-					<strong>
-						<li style="float:right">	<a href="appointment.html">Appointment</a> </li>
-						<li style="float:right">	<a href="service.html">Service</a> </li>
-						<li style="float:right">	<a href="about.html">About</a> </li>
-						<li style="float:right">	<a href="index.html">Home</a> </li>
-					</strong>
-				</ul>
-			</nav>
-
         <div class="wrapper row">
+          <nav>
+    				<ul>
+    						<li ><a href="index.html" style="text-align:left">
+    							<img src="media/logo.png" height="100%" width= "100%">
+    						</a> </li>
+    					  	<li style="float:right"><a class="button" href="login.html" style="padding: 15px; width: 150px">Login</a></li>
 
+    					<strong>
+    						<li style="float:right">	<a href="appointment.html">Appointment</a> </li>
+    						<li style="float:right">	<a href="service.html">Service</a> </li>
+    						<li style="float:right">	<a href="about.html">About</a> </li>
+    						<li style="float:right">	<a href="index.html">Home</a> </li>
+    					</strong>
+    				</ul>
+    			</nav>
 
             <header>
                 <h1>user registeration page</h1>
             </header>
-            <div class=" column2">
+            <div class=" leftcolumn">
               <h2>User Login</h2>
 
                 <form action="php/login.php" method="POST" id="login_form">
@@ -122,7 +120,7 @@
                 </form>
 
             </div>
-            <div class="column2">
+            <div class="rightcolumn">
               <h2>Registeration</h2>
               <form action="./php/newuser.php" method="POST" onsubmit="form_validate()" id="register_form">
                 <table>
