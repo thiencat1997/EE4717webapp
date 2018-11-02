@@ -60,11 +60,11 @@
 			  		<table class="footerTable">
 			  			<tr width=100px>
 			  				<td>Monday - Friday</td>
-			  				<td>9 pm - 9 pm</td>
+			  				<td>9 am - 9 pm</td>
 			  			</tr>
 			  			<tr>
 			  				<td>Saturday - Sunday</td>
-			  				<td>12pm - 9pm</td>
+			  				<td>12 pm - 9 pm</td>
 			  			</tr>
 			  		</table>
 			  		</p>
