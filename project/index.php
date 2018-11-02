@@ -54,7 +54,7 @@ img{
 		  <div class="column">
 		  	<div class="column-right">
 				<img src="media/news-3.png" height="100%" width= "100%">
-				<a class="boxhead" href="appointment.php"><h2>Appointment</h2></a>
+				<a class="boxhead" href="booking.php"><h2>Appointment</h2></a>
 				<p>Patients can make appointments through our website and check the status at their convenience.
 				</p>
 			  </div>

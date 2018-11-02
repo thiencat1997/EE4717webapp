@@ -14,7 +14,7 @@
 	<div class='hero-image' style='background-image: url(media/subscribe-bg.png); height:400px' >
 		<div class='container hero-text'>
 			Book appoinment to beat the queue and get exclusive discount<br><br>
-			<a class='button' style='width: 400px; padding:20px; margin-left: 0' href='register.php'>
+			<a class='button' style='width: 400px; padding:20px; margin-left: 0' href='booking.php'>
 			Book Appoinment
 			</a>
 		</div>

@@ -30,7 +30,7 @@
 		  	</li>
 
 		<strong>
-			<li style="float:right">	<a href="appointment.php" style='width: 300px'>Book Appointment</a> </li>
+			<li style="float:right">	<a href="booking.php" style='width: 300px'>Book Appointment</a> </li>
 			<li style="float:right">	<a href="service.php">Service</a> </li>
 			<li style="float:right">	<a href="about.php">About</a> </li>
 			<li style="float:right">	<a href="index.php">Home</a> </li>
