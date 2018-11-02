@@ -4,6 +4,7 @@
         <title>Check Booking Status</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="registerstyle.css">
     </head>
 
 <?php
@@ -39,38 +40,55 @@
 ?>
 
     <body>
-        <div>
-            <table align="center">
-                <tr>
-                    <td><input type="Submit" name="new" value="New Appointment"></td>
-                    <td><input type="Submit" name="status" value="Check Status"></td>
-                </tr>
-            </table>
-        </div>
+      <nav>
+        <ul>
+            <li ><a href="index.html" style="text-align:left">
+              <img src="media/logo.png" height="100%" width= "100%">
+            </a> </li>
+
+
+          <strong>
+            <li style="float:right">	<a href="appointment.html">Appointment</a> </li>
+            <li style="float:right">	<a href="service.html">Service</a> </li>
+            <li style="float:right">	<a href="about.html">About</a> </li>
+            <li style="float:right">	<a href="index.html">Home</a> </li>
+          </strong>
+        </ul>
+      </nav>
+
 
         <div id="welcome">
-            <h2>Welcome!</h2>
+            <h1>Welcome!</h1>
+            <div>
+                <button type="Submit" name="new" class="button">New Appointment</button>
+                <button type="Submit" name="status" class="button">Check Status</button>
+
+            </div>
+
             <p>Booking details:</p>
             <div id="detials">
+              <form>
                 <table>
                     <tr class="header">
                         <td>Id</td>
                         <td>Name</td>
                         <td>Title</td>
                     </tr>
-            <?php
-               while ($row = mysql_fetch_array($query)) {
-                   echo "<tr>";
-                   echo "<td>".$row[ID]."</td>";
-                   echo "<td>".$row[Name]."</td>";
-                   echo "<td>".$row[Title]."</td>";
-                   echo "</tr>";
-               }
+                      <?php
+                         while ($row = mysql_fetch_array($query)) {
+                             echo "<tr>";
+                             echo "<td>".$row[ID]."</td>";
+                             echo "<td>".$row[Name]."</td>";
+                             echo "<td>".$row[Title]."</td>";
+                             echo "</tr>";
+                         }
 
-            ?>
+                      ?>
+                    </table>
 
                 <input type="Submit" name="cancel" value="Cancel">
                 <input type="Submit" name="reschedule" value="Reschedule">
+              </form>
             </div>
             <input type="Submit" name="back" value="Back">
         </div>
