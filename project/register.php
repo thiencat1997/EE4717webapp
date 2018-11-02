@@ -64,8 +64,8 @@
                         </div>
                         <a href="#">Forgot password?</a><br>
                         <a href="#">Forgot username?</a>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me</input>
-                        <button type="submit" onsubmit="ShowAlert()" class="button">Login</button>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me</input><br>
+                        <button type="submit" onsubmit="ShowAlert()" class="button" style="margin-left: 200px;">Login</button>
                         <?php
 
                         if (isset($_POST['user']) && isset($_POST['password'])){
@@ -142,7 +142,7 @@
                     <label for="phone">*Phone Number:</label>
                     <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required onchange="PhoneCheck()"></input>
                   </div>
-                  <button type="submit" onsubmit="ShowAlert()" class="button">Submit</button>
+                  <button type="submit" onsubmit="ShowAlert()" class="button" style="margin-left: 270px;">Submit</button>
 
                 </form>
               </div>
@@ -150,5 +150,81 @@
             </main>
         </div>
         <script src="form_validation.js"> </script>
+        <div class="hero-image">
+          <div class="container" style="padding-top: 50px">
+          		  <div class="column">
+        		  	<div class="column-left">
+        			<ul>
+        					<li ><a href="index.html" style="text-align:left">
+        						<img src="media/logo.png" height="100%" width= "100%">
+        					</a> </li>
+        					</ul>
+        			<p>The best quality private clinic, highest technology and service level with reasonable charge. Ensure health of every customer.
+        			</p>
+        			</div>
+        		  </div>
+        		  <div class="column">
+        		  	<div class="column-middle" style="padding-top: 50px">
+
+
+        		  		<div style="border:3px solid transparent; border-radius: 40px; padding-left: 30px; height:220px">
+        		  			<h2 style="  display: inline-block;
+        						  margin: 0;
+        						  transform: translateY(-50%);
+        						  background: #fff;
+        						  padding: 0 .5em;">
+          						Contact
+
+
+         						 </h2>
+         						<p>
+        			  		<table class="footerTable">
+        			  			<tr width=100px>
+        			  				<td>Addtress</td>
+        			  				<td>Mitlton Str. 26-27 London UK</td>
+        			  			</tr>
+        			  			<tr>
+        			  				<td>Phone</td>
+        			  				<td>+53 345 7953 32453 </td>
+        			  			</tr>
+        			  			<tr>
+        			  				<td>Email</td>
+        			  				<td>yourmail@gmail.com </td>
+        			  			</tr>
+        			  		</table>
+        			  		</p>
+        		  		</div>
+        		  </div>
+        		  </div>
+        		  <div class="column">
+        		  	<div class="column-right" style="padding-top: 50px">
+        		  		<div style="border:3px solid #ccc; border-radius: 40px; padding-left: 30px; height:200px">
+        		  			<h2 style="  display: inline-block;
+        						  margin: 0;
+        						  transform: translateY(-50%);
+        						  background: #fff;
+        						  padding: 0 .5em;">
+          						Opening Hours
+
+
+         						 </h2>
+         						 <p>
+        			  		<table class="footerTable">
+        			  			<tr width=100px>
+        			  				<td>Monday - Friday</td>
+        			  				<td>5pm-7pm</td>
+        			  			</tr>
+        			  			<tr>
+        			  				<td>Saturday - Sunday</td>
+        			  				<td>5pm-7pm</td>
+        			  			</tr>
+        			  		</table>
+        			  		</p>
+        		  		</div>
+        			  </div>
+        		  </div>
+          </div>
+        </div>
+
     </body>
 </html>
