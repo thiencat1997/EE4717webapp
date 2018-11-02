@@ -36,8 +36,33 @@
                   <option value="Orthopedic">Orthopedic Surgery</option>
                 </select>
               </div>
-            </div>
+              <div>
+                <label for="doctor">Doctor:</label>
+                <select name="doctor" id="doctor">
+                  <option value=null >--Select--</option>
+                  <option value="DrA">Doctor A</option>
+                  <option value="DrB">Doctor B</option>
+                  <option value="DrC">Doctor C</option>
+                </select>
+              </div>
+              <div>
+                <label for="date">Date:</label>
+                <select name="date" id="date">
 
+                </select>
+              </div>
+              <div>
+                <label for="time">Time slot:</label>
+                <select name="time" id="time">
+
+                </select>
+              </div>
+              <div>
+                <label for="remarks">Remarks:</label>
+                <input type="textarea" placeholder="Special notice to your doctor" style="width: 200px; height: 100px; margin-top: 5px;"></input>
+              </div>
+            <button type="submit" onsubmit="ShowAlert()" class="button" style="margin-left: 270px;">Submit</button>
+            </div>
           </form>
       </div>
       <div class="hero-image">
