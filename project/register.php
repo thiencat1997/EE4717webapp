@@ -28,7 +28,7 @@
 
 
     <body>
-        <div class="wrapper">
+
           <nav>
     				<ul>
     						<li ><a href="index.html" style="text-align:left">
@@ -45,8 +45,8 @@
     				</ul>
     			</nav>
 
-            <header>
-                <h1>user registeration page</h1>
+            <header style="margin-left: 3%;">
+                <h1>Membership Sign In/Up Form</h1>
             </header>
             <main>
               <div class="login">
@@ -63,8 +63,8 @@
                           <input type="password" name="password" id="password" required></input>
                         </div>
                         <a href="#">Forgot password?</a><br>
-                        <a href="#">Forgot username?</a>
-                        <input type="checkbox" checked="checked" name="remember"> Remember me</input><br>
+                        <a href="#">Forgot username?</a><br>
+                        Remember me <input type="checkbox" checked="checked" name="remember" ></input><br>
                         <button type="submit" onsubmit="ShowAlert()" class="button" style="margin-left: 200px;">Login</button>
                         <?php
 
@@ -148,7 +148,7 @@
               </div>
               </div>
             </main>
-        </div>
+
         <script src="form_validation.js"> </script>
         <div class="hero-image">
           <div class="container" style="padding-top: 50px">
