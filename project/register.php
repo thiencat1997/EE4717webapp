@@ -34,7 +34,7 @@
     						<li ><a href="index.html" style="text-align:left">
     							<img src="media/logo.png" height="100%" width= "100%">
     						</a> </li>
-    					  	<li style="float:right"><a class="button" href="login.html" style="padding: 15px; width: 150px">Login</a></li>
+
 
     					<strong>
     						<li style="float:right">	<a href="appointment.html">Appointment</a> </li>
@@ -52,7 +52,7 @@
               <div class="login">
                 <h2>User Login</h2>
 
-                  <form action="php/login.php" method="POST" id="login_form">
+                  <form action="register.php" method="POST" id="login_form">
                     <div class="container ">
                         <div>
                           <label for="user">Username:</label>
@@ -65,7 +65,31 @@
                         <a href="#">Forgot password?</a><br>
                         <a href="#">Forgot username?</a>
                         <input type="checkbox" checked="checked" name="remember"> Remember me</input>
-                        <input type="submit" name="login" value="Login" ></input>
+                        <button type="submit" onsubmit="ShowAlert()" class="button">Login</button>
+                        <?php
+
+                        if (isset($_POST['user']) && isset($_POST['password'])){
+                          $user=$_POST['user'];
+                          $password=$_POST['password'];
+                          $query="select * from users where Username='$user' and Password='$password'";
+                          $run=mysqli_query($conn,$query);
+
+                        if(mysqli_num_rows($run)>0) {
+                            echo"<p>login successfully</p>";
+                            //echo "<script> window.open('index.php','_self')</script>";
+                            $message = "success";
+                            //echo "<script type='text/javascript'>alert('$message');</script>";
+                            //header("Location: ../status.html");
+                            $_SESSION['user']=$user;
+                        } else {
+                            echo"<p>invalid username or password!</p>";
+                            $message = "No";
+                            //echo "<script type='text/javascript'>alert('$message');</script>";
+                            //header("Location: ../register.php");
+                        }
+                        }
+
+                        ?>
 
                     </div>
                   </form>
@@ -92,31 +116,31 @@
                   </div>
                   <div>
                     <label for="lastname">*Last Name:</label>
-                    <input type="text" id="lastname" name="lastname" id="lastname" required onchange="LastNameCheck()"></input>
+                    <input type="text" id="lastname" name="lastname" placeholder="Your Last Name" required onchange="LastNameCheck()"></input>
                   </div>
                   <div>
                     <label for="username">*Username:</label>
-                    <input type="text" id="username" name="username" required onchange="UsernameCheck()"></input>
+                    <input type="text" id="username" name="username" placeholder="Choose a Username" required onchange="UsernameCheck()"></input>
                   </div>
                   <div>
                     <label for="pwd">*Password:</label>
-                    <input type="password" id="pwd" name="pwd" required ></input>
+                    <input type="password" id="pwd" name="pwd" placeholder="Choose a password"required ></input>
                   </div>
                   <div>
                     <label for="cpwd">*Confirm Password:</label>
-                    <input type="password" id="cpwd" name="cpwd" required onchange="PwdCheck()"></input>
+                    <input type="password" id="cpwd" name="cpwd" placeholder="Confirm password" required onchange="PwdCheck()"></input>
                   </div>
                   <div>
                     <label for="email">*Email Address:</label>
-                    <input type="email" id="email" name="email" required></input>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required></input>
                   </div>
                   <div>
                     <label for="cemail">*Confirm Email:</label>
-                    <input type="email" id="cemail" name="cemail" required onchange="EmailCheck()"></input>
+                    <input type="email" id="cemail" name="cemail" placeholder="Confirm Email" required onchange="EmailCheck()"></input>
                   </div>
                   <div>
                     <label for="phone">*Phone Number:</label>
-                    <input type="text" id="phone" name="phone" required onchange="PhoneCheck()"></input>
+                    <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required onchange="PhoneCheck()"></input>
                   </div>
                   <button type="submit" onsubmit="ShowAlert()" class="button">Submit</button>
 
