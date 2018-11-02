@@ -11,6 +11,7 @@ body,footer {
 }
 
 .container {
+  min-width: 1000px;
   max-width: 1500px;
   margin: auto;
 }
@@ -195,4 +196,9 @@ a.active {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+
+.boxhead a a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
 }
