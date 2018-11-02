@@ -1,0 +1,86 @@
+<div class="container">
+
+  <label for="time">Time</label>
+  <select class="time-picker" name="time" id="time">
+    <option value="1000">10:00-11:00</option>
+    <option value="1100">11:00-12:00</option>
+    <option value="1200">12:00-13:00</option>
+    <option value="1300">13:00-14:00</option>
+    <option value="1400">14:00-15:00</option>
+    <option value="1500">15:00-16:00</option>
+    <option value="1600">16:00-17:00</option>
+    <option value="1700">17:00-18:00</option>
+  </select>
+</div>
+
+<style media="screen">
+  .container {
+    position: relative;
+    height: 1.5rem;
+  }
+  .expanded + .time-picker-content {
+    display: flex;
+  }
+  .time-picker-content {
+    margin: 0;
+    list-style: none;
+    display: none;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 30vw;
+    top: 1.5rem;
+    background: #EEE;
+    padding: 1rem;
+  }
+  .time-picker-content li {
+    display: inline-block;
+    flex: 0 0 30%;
+    margin: 10px 1.5%;
+    padding: 10px;
+    background: #999;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 10px;
+    cursor: pointer;
+    user-select: none;
+  }
+</style>
+
+<script type="text/javascript">
+  var time_picker = document.getElementById('time');
+  time_picker.addEventListener('mousedown', selectTime);
+  function init() {
+    var dropdown = document.createElement('ul');
+    dropdown.classList.add('time-picker-content');
+    var content = '';
+    for(var i=0; i<time_picker.children.length; i++) {
+      var value = time_picker.children[i].value;
+      var text = time_picker.children[i].text;
+      content += `<li data-value='${value}' onclick='updateTime(this)'>${text}</li>`;
+    }
+    dropdown.innerHTML = content;
+    time_picker.insertAdjacentElement('afterend', dropdown);
+    selectTime.innerHTML = '';
+  }
+  function updateTime(option) {
+    time_picker.value = option.dataset.value;
+  }
+  function selectTime(e) {
+    e.preventDefault();
+    e.target.classList.toggle('expanded');
+  }
+  init();
+</script>
+
+<?php
+$query ="SELECT * FROM (
+    SELECT * FROM doctors s
+  LEFT JOIN booking b
+    ON s.DrName = b.DrName
+    AND s.Time = b.Time
+) as records
+WHERE records.Date = '2018-10-11'
+AND records.BookID IS NULL;"
+
+?>
