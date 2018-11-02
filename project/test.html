@@ -74,13 +74,12 @@
 </script>
 
 <?php
-$query ="SELECT * FROM (
-    SELECT * FROM doctors s
+
+$query ="SELECT * FROM (    SELECT * FROM doctors s
   LEFT JOIN booking b
     ON s.DrName = b.DrName
     AND s.Time = b.Time
 ) as records
-WHERE records.Date = '2018-10-11'
-AND records.BookID IS NULL;"
+WHERE records.Date = '".$date."'AND records.DrName = '".$doctor."'AND records.BookID IS NULL;"
 
 ?>
