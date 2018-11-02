@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Check Booking Status</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="registerstyle.css">
+    </head>
+
+<?php
+    $servername = "localhost";
+    $username = "f31ee";
+    $password = "f31ee";
+    $dbname = "f31ee";
+
+
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (mysqli_connect_error()) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    //else
+    //  echo "connected successfully";
+
+    $connectdb = mysqli_select_db($conn, 'booking');
+
+    $display = "SELECT * FROM booking WHERE UserID = ";
+    $result = mysqli_query($conn, $display);
+
+    while ($row = mysql_fetch_array($query)) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "Service " . $row["Service"]."<br> Doctor: " . $row["Dr"]. "<br> Date: " . $row["Date"]. "<br> Time: " . $row["Time"]. "<br> Remarks: ". $row["Remarks"]. ;
+        }
+    } else {
+        echo "You don't have any appointment.";
+    }
+
+?>
+
+    <body>
+      <nav>
+        <ul>
+            <li ><a href="index.html" style="text-align:left">
+              <img src="media/logo.png" height="100%" width= "100%">
+            </a> </li>
+            <li style="float:right"><a class="button" href="register.php" style="padding: 15px; width: 150px margin-top: 15px;">Log out</a></li>
+
+          <strong>
+            <li style="float:right">	<a href="appointment.html">Appointment</a> </li>
+            <li style="float:right">	<a href="service.html">Service</a> </li>
+            <li style="float:right">	<a href="about.html">About</a> </li>
+            <li style="float:right">	<a href="index.html">Home</a> </li>
+          </strong>
+        </ul>
+      </nav>
+
+
+        <div id="welcome">
+            <h1>Welcome!</h1>
+            <div>
+                <a class="button" href="booking.html" style="padding: 15px; width: 300px; margin-left: 30%;">New Appointment</a></li>
+                <button type="Submit" name="status" class="button"style="margin-left: 10%; width: 300px;">Check Status</button>
+            </div>
+
+            <div id="detials">
+              <p>Booking details:</p>
+              <form>
+                <table>
+                    <tr class="header">
+                        <td>Id</td>
+                        <td>Name</td>
+                        <td>Title</td>
+                    </tr>
+                      <?php
+                         while ($row = mysql_fetch_array($query)) {
+                             echo "<tr>";
+                             echo "<td>".$row[ID]."</td>";
+                             echo "<td>".$row[Name]."</td>";
+                             echo "<td>".$row[Title]."</td>";
+                             echo "</tr>";
+                         }
+
+                      ?>
+                    </table>
+
+                <input type="Submit" name="cancel" value="Cancel">
+                <input type="Submit" name="reschedule" value="Reschedule">
+              </form>
+            </div>
+            <input type="Submit" name="back" value="Back">
+        </div>
+
+        </div>
+        <div class="hero-image">
+          <div class="container" style="padding-top: 50px">
+          		  <div class="column">
+        		  	<div class="column-left">
+        			<ul>
+        					<li ><a href="index.html" style="text-align:left">
+        						<img src="media/logo.png" height="100%" width= "100%">
+        					</a> </li>
+        					</ul>
+        			<p>The best quality private clinic, highest technology and service level with reasonable charge. Ensure health of every customer.
+        			</p>
+        			</div>
+        		  </div>
+        		  <div class="column">
+        		  	<div class="column-middle" style="padding-top: 50px">
+
+
+        		  		<div style="border:3px solid transparent; border-radius: 40px; padding-left: 30px; height:220px">
+        		  			<h2 style="  display: inline-block;
+        						  margin: 0;
+        						  transform: translateY(-50%);
+        						  background: #fff;
+        						  padding: 0 .5em;">
+          						Contact
+
+
+         						 </h2>
+         						<p>
+        			  		<table class="footerTable">
+        			  			<tr width=100px>
+        			  				<td>Addtress</td>
+        			  				<td>Mitlton Str. 26-27 London UK</td>
+        			  			</tr>
+        			  			<tr>
+        			  				<td>Phone</td>
+        			  				<td>+53 345 7953 32453 </td>
+        			  			</tr>
+        			  			<tr>
+        			  				<td>Email</td>
+        			  				<td>yourmail@gmail.com </td>
+        			  			</tr>
+        			  		</table>
+        			  		</p>
+        		  		</div>
+        		  </div>
+        		  </div>
+        		  <div class="column">
+        		  	<div class="column-right" style="padding-top: 50px">
+        		  		<div style="border:3px solid #ccc; border-radius: 40px; padding-left: 30px; height:200px">
+        		  			<h2 style="  display: inline-block;
+        						  margin: 0;
+        						  transform: translateY(-50%);
+        						  background: #fff;
+        						  padding: 0 .5em;">
+          						Opening Hours
+
+
+         						 </h2>
+         						 <p>
+        			  		<table class="footerTable">
+        			  			<tr width=100px>
+        			  				<td>Monday - Friday</td>
+        			  				<td>5pm-7pm</td>
+        			  			</tr>
+        			  			<tr>
+        			  				<td>Saturday - Sunday</td>
+        			  				<td>5pm-7pm</td>
+        			  			</tr>
+        			  		</table>
+        			  		</p>
+        		  		</div>
+        			  </div>
+        		  </div>
+          </div>
+        </div>
+
+    </body>
+</html>

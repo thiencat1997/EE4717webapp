@@ -5,13 +5,13 @@ function form_validate() {
     EmailCheck();
     PwdCheck();
 	PhoneCheck();
-} 
+}
 
 function FirstNameCheck(){
     var name = document.getElementById('firstname').value;
     var nameRegex = /^[A-Za-z ]+$/;
 
-    if (nameRegex.test(name)==false){             
+    if (nameRegex.test(name)==false){
         alert("Please enter valid name");
         return false;
     }
@@ -21,7 +21,7 @@ function LastNameCheck(){
     var name = document.getElementById('lastname').value;
     var nameRegex = /^[A-Za-z]+$/;
 
-    if (nameRegex.test(name)==false){             
+    if (nameRegex.test(name)==false){
         alert("Please enter valid name");
         return false;
     }
@@ -29,7 +29,7 @@ function LastNameCheck(){
 
 function UsernameCheck(){
     var uname = document.getElementById('username').value;
-	
+
     var unameRegex = /^\w+$/;
     if(unameRegex.test(uname)==false) {
       alert("Error: Username must contain only letters, numbers and underscores!");
@@ -45,12 +45,12 @@ function EmailCheck(){
     var cemail = document.getElementById('cemail').value;
 
     var emailRegex = /^[\w.-]+@(\w+.){1,3}\w{2,3}$/;
-	
+
 	if( email!= "" && email == cemail) {
 		if (emailRegex.test(email)==false){
         alert("Please enter a valid email");
         return false;
-        form.email.focus();
+        email.focus();
     	}
         else
             return true;
@@ -66,7 +66,7 @@ function EmailCheck(){
 function PwdCheck(){
 	var pwd = document.getElementById('pwd').value;
 	var cpwd = document.getElementById('cpwd').value;
-    
+
     if( pwd != "" && pwd == cpwd) {
       if(pwd.length < 6) {
         alert("Error: Password must contain at least six characters!");
@@ -129,4 +129,3 @@ function ShowAlert(){
     }
 }
 */
-

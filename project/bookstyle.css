@@ -1,0 +1,14 @@
+.book {
+  width: 70%;
+	background: #fff;
+	border-radius: 2px;
+	padding: 2rem 2rem 5rem;
+	box-shadow: 1px 0 50px rgba(0, 0, 0, 0.1);
+}
+.button {
+	padding: 15px;
+	width: 200px;
+	margin: auto;
+	margin-top: 2rem;
+	text-decoration: none;
+}
