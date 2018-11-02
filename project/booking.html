@@ -21,19 +21,19 @@
           </strong>
         </ul>
       </nav>
-      <header>Make an Appointment
+      <header>
+        <h1>Make an Appointment</h1>
       </header>
       <div class="book">
-          <form >
-            <div class="container ">
+          <form>
+            <div class="bookform">
               <div>
                 <label for="service">Service:</label>
                 <select name="service" id="service">
                   <option value=null >--Select--</option>
-                  <option value="Consultations">Medical Consultations & Prescriptions</option>
-                  <option value="Obstetrics">Obstetrics & Gynecology</option>
-
-                  <option value="Orthopedic">Orthopedic Surgery</option>
+                  <option value="consultation">Medical Consultation</option>
+                  <option value="routine">Routine Checkup</option>
+                  <option value="comprehensive">Comprehensive Health Exam</option>
                 </select>
               </div>
               <div>
@@ -68,7 +68,7 @@
               </div>
               <div>
                 <label for="remarks">Remarks:</label>
-                <input type="textarea" placeholder="Special notice to your doctor" style="width: 200px; height: 100px; margin-top: 5px;"></input>
+                <input type="textarea" placeholder="Special notice to your doctor"></input>
               </div>
             <button type="submit" onsubmit="ShowAlert()" class="button" style="margin-left: 270px;">Submit</button>
             </div>
@@ -150,7 +150,7 @@
         </div>
       </div>
 
-
+      <script src="js/index.js"></script>
     </body>
 
 </html>

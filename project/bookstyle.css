@@ -1,14 +1,32 @@
-.book {
-  width: 70%;
+input,textarea, select {
+    display: block;
+    width: 70%;
+    height: 70px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #555555;
+    line-height: 1.2;
+    padding: 10px 0px;
+    text-align: left;
+    align-items: center;
+}
+
+.book{
+  margin-left: 20%;
+  width: 45%;
 	background: #fff;
 	border-radius: 2px;
 	padding: 2rem 2rem 5rem;
 	box-shadow: 1px 0 50px rgba(0, 0, 0, 0.1);
 }
-.button {
-	padding: 15px;
-	width: 200px;
-	margin: auto;
-	margin-top: 2rem;
-	text-decoration: none;
+
+h1{
+  margin-left: 5%;
+}
+
+.bookform {
+  margin-left: 20%;
+
 }
