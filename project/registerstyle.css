@@ -1,29 +1,26 @@
 
 main {
 	height: 80%;
-	margin-left: 3%;
+	margin-left: 0;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 }
-form {
+form{
 	width: 100%;
 }
 .login {
-	margin-left: 5%;
-	width: 20%;
+	margin-left: 0;
 	background-color: white;
 	margin-right: 5%;
-}
-.registeration {
-	width: 45%;
+	width: 30%;
 	background: #fff;
 	border-radius: 2px;
 	padding: 2rem 2rem 5rem;
 	box-shadow: 1px 0 50px rgba(0, 0, 0, 0.1);
 }
-.login {
-	width: 30%;
+.registeration {
+	width: 55%;
 	background: #fff;
 	border-radius: 2px;
 	padding: 2rem 2rem 5rem;
@@ -40,9 +37,9 @@ form {
 .content {padding: 20px 20px 0 20px;
 }
 #floatright { margin: 10px;
-						 float: right;
+	float: right;
 }
-.container div {
+.container3 div {
 	border-bottom: 2px solid #dbdbdb;
 	margin-bottom: 1rem;
 }
