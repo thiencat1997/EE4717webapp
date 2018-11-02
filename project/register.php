@@ -5,35 +5,6 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="registerstyle.css">
         <script type = "text/javascript"  src = "form_validation.js" ></script>
-        <!---<style>
-            body {font-family:Verdana, Arial, sans-serif;
-                  background-color: #9ebdef;
-            }
-            #wrapper { background-color: #b3c7e6;
-                       color: #000066;
-                       width: 80%;
-                       margin: auto;
-                       min-width:850px;
-            }
-            #leftcolumn { float: left;
-                          width: 32%;
-                          background-color: white;
-            }
-            #rightcolumn { margin-left: 35%;
-                           background-color: #bfedef;
-                           color: #000000;
-            }
-            .content {padding: 20px 20px 0 20px;
-            }
-            #floatright { margin: 10px;
-                         float: right;
-            }
-            footer {font-size:70%;
-                     text-align: center;
-                     clear: right;
-                     padding-bottom:20px;
-            }
-        </style>--->
     </head>
 <?php
     $servername = "localhost";
@@ -56,28 +27,10 @@
 
 
     <body>
-      <nav>
-				<ul>
-						<li ><a href="index.html" style="text-align:left">
-							<img src="media/logo.png" height="100%" width= "100%">
-						</a> </li>
-					  	<li style="float:right"><a class="button" href="login.html" style="padding: 15px; width: 150px">Login</a></li>
-
-					<strong>
-						<li style="float:right">	<a href="appointment.html">Appointment</a> </li>
-						<li style="float:right">	<a href="service.html">Service</a> </li>
-						<li style="float:right">	<a href="about.html">About</a> </li>
-						<li style="float:right">	<a href="index.html">Home</a> </li>
-					</strong>
-				</ul>
-			</nav>
-
-        <div class="wrapper row">
-
-
-            <header>
                 <h1>user registeration page</h1>
-            </header>
+
+        <div class="container row">
+
             <div class=" column2">
               <h2>User Login</h2>
 

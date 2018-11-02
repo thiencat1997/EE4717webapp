@@ -1,19 +1,13 @@
 body,footer {
-	font-family: 'Trebuchet MS', sans-serif;
-	margin:0;
+  font-family: 'Trebuchet MS', sans-serif;
+  margin:0;
     color: #2e3131;
     line-height: 2em;
     padding-top:
-	}
+  }
 
 .navbar {
   position: relative;
-}
-
-.wrapper {
-  max-width: 1500px;
-  margin: auto;
-  width: 80%;
 }
 
 .container {
@@ -22,15 +16,12 @@ body,footer {
 }
 
 
-.leftcolumn {
-  float: left;
-  width: 32%;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
 }
-
-.rightcolumn {
-  margin-left: 35%;
-}
-
 
 p{
   font-size: 20px;
@@ -72,7 +63,7 @@ li a {
     text-align: center;
     padding-top: 30px ;
     text-decoration: none;
-	width: 180px;
+  width: 180px;
 }
 
 li a:hover {
@@ -98,8 +89,8 @@ a.active {
 }
 
 .home-thumbnail{
-	height:42;
-	width:42;
+  height:42;
+  width:42;
 }
 
 .service{
@@ -125,6 +116,29 @@ a.active {
   font-size: 40px;
 }
 
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.column-left{
+  margin-right:35px;
+}
+.column-middle{
+  margin-right:18.5px;
+  margin-left:18.5px;
+}
+.column-right{
+  margin-left:35px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .footerTable td{
     padding: 8px;
     font-size: 20px;
@@ -134,6 +148,50 @@ a.active {
   font-weight: bold;
 }
 
+.banner-container{
+    background-size:  1500px;
+  height: 750px;
+  background-position: right;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: #e4f1fe;
+}
+
+.banner-text{
+    padding: 60px 0;
+    width:50%;
+}
+
+.banner-text-2{
+    padding: 150px 0;
+    width:50%;
+
+}
+.banner-container-2{
+    background-size:  1500px;
+  height: 500px;
+  background-position: right;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: #e4f1fe;
+  font-size: 80px;
+}
+
 .row {
     display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column2 {
+    flex: 50%;
+}
+
+#team{
+   background-image: 'team.png';
+   background-color: #cccccc;
+  height: 450px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
