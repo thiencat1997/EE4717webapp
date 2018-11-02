@@ -28,22 +28,11 @@
 
 
     <body>
-
-          <nav>
-    				<ul>
-    						<li ><a href="index.html" style="text-align:left">
-    							<img src="media/logo.png" height="100%" width= "100%">
-    						</a> </li>
-
-
-    					<strong>
-    						<li style="float:right">	<a href="appointment.html">Appointment</a> </li>
-    						<li style="float:right">	<a href="service.html">Service</a> </li>
-    						<li style="float:right">	<a href="about.html">About</a> </li>
-    						<li style="float:right">	<a href="index.html">Home</a> </li>
-    					</strong>
-    				</ul>
-    			</nav>
+      <div class="banner-container-2" style="background-image: url('media/contact-bg.png');">   
+        <div style="width:1500px; margin: auto" >
+          <?php include_once 'subhtml/navbar.php'; ?>
+        </div>
+      </div>
 
             <header style="margin-left: 3%;">
                 <h1>Membership Sign In/Up Form</h1>
@@ -150,81 +139,8 @@
             </main>
 
         <script src="form_validation.js"> </script>
-        <div class="hero-image">
-          <div class="container" style="padding-top: 50px">
-          		  <div class="column">
-        		  	<div class="column-left">
-        			<ul>
-        					<li ><a href="index.html" style="text-align:left">
-        						<img src="media/logo.png" height="100%" width= "100%">
-        					</a> </li>
-        					</ul>
-        			<p>The best quality private clinic, highest technology and service level with reasonable charge. Ensure health of every customer.
-        			</p>
-        			</div>
-        		  </div>
-        		  <div class="column">
-        		  	<div class="column-middle" style="padding-top: 50px">
 
-
-        		  		<div style="border:3px solid transparent; border-radius: 40px; padding-left: 30px; height:220px">
-        		  			<h2 style="  display: inline-block;
-        						  margin: 0;
-        						  transform: translateY(-50%);
-        						  background: #fff;
-        						  padding: 0 .5em;">
-          						Contact
-
-
-         						 </h2>
-         						<p>
-        			  		<table class="footerTable">
-        			  			<tr width=100px>
-        			  				<td>Addtress</td>
-        			  				<td>Mitlton Str. 26-27 London UK</td>
-        			  			</tr>
-        			  			<tr>
-        			  				<td>Phone</td>
-        			  				<td>+53 345 7953 32453 </td>
-        			  			</tr>
-        			  			<tr>
-        			  				<td>Email</td>
-        			  				<td>yourmail@gmail.com </td>
-        			  			</tr>
-        			  		</table>
-        			  		</p>
-        		  		</div>
-        		  </div>
-        		  </div>
-        		  <div class="column">
-        		  	<div class="column-right" style="padding-top: 50px">
-        		  		<div style="border:3px solid #ccc; border-radius: 40px; padding-left: 30px; height:200px">
-        		  			<h2 style="  display: inline-block;
-        						  margin: 0;
-        						  transform: translateY(-50%);
-        						  background: #fff;
-        						  padding: 0 .5em;">
-          						Opening Hours
-
-
-         						 </h2>
-         						 <p>
-        			  		<table class="footerTable">
-        			  			<tr width=100px>
-        			  				<td>Monday - Friday</td>
-        			  				<td>5pm-7pm</td>
-        			  			</tr>
-        			  			<tr>
-        			  				<td>Saturday - Sunday</td>
-        			  				<td>5pm-7pm</td>
-        			  			</tr>
-        			  		</table>
-        			  		</p>
-        		  		</div>
-        			  </div>
-        		  </div>
-          </div>
-        </div>
+        <?php include_once 'footer.php'; ?>
 
     </body>
 </html>
