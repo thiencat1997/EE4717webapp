@@ -33,4 +33,28 @@
         header("Location: ../register.php");
     }
     //echo $message;
+
+//option 2
+if (isset($_POST['user']) && isset($_POST['password'])){
+  $user=$_POST['user'];
+  $password=$_POST['password'];
+  $query="select * from users where Username='$user'";
+  $run=mysqli_query($conn,$query);
+
+  if(mysqli_num_rows($run)>0) {
+      $row = mysqli_fetch_assoc($run);
+      if (password_verify($password, $row['Password'])) {
+        $_SESSION['user']=$user;
+        //redirect_to("index.html");
+        echo"<p>login successfully</p>";
+        //echo "<script type='text/javascript'>alert('$message');</script>";
+        //header("Location: ../status.html");
+      }
+  }
+  else {
+      echo"<p>invalid username or password!</p>";
+      //echo "<script type='text/javascript'>alert('$message');</script>";
+      //header("Location: ../register.php");
+  }
+}
 ?>

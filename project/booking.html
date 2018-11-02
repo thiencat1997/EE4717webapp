@@ -40,16 +40,25 @@
                 <label for="doctor">Doctor:</label>
                 <select name="doctor" id="doctor">
                   <option value=null >--Select--</option>
-                  <option value="DrA">Doctor A</option>
-                  <option value="DrB">Doctor B</option>
-                  <option value="DrC">Doctor C</option>
+                  <option value="A">Doctor A</option>
+                  <option value="B">Doctor B</option>
+                  <option value="C">Doctor C</option>
                 </select>
               </div>
               <div>
                 <label for="date">Date:</label>
-                <select name="date" id="date">
+                <input type="date" name="date" id="date" onchange="DateCheck()"></input>
+                <script>
+                function DateCheck(){
+                    var date = Date.parse(document.getElementById('date').value);
+                    var now = new Date();
 
-                </select>
+                    if (date < now){
+                        alert("Please enter a future date");
+                        return false;
+                    }
+                }
+                </script>
               </div>
               <div>
                 <label for="time">Time slot:</label>
