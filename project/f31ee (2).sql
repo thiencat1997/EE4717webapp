@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 02, 2018 at 03:04 PM
+-- Generation Time: Nov 03, 2018 at 05:54 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 5.6.38
 
@@ -33,10 +33,19 @@ CREATE TABLE `booking` (
   `UserID` int(100) NOT NULL,
   `Service` varchar(30) NOT NULL,
   `DrName` varchar(10) NOT NULL,
-  `Date` date NOT NULL,
-  `Time` time NOT NULL,
+  `BookDate` date NOT NULL,
+  `BookTime` varchar(20) NOT NULL,
+  `SlotID` int(11) NOT NULL,
   `Remarks` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `booking`
+--
+
+INSERT INTO `booking` (`BookID`, `UserID`, `Service`, `DrName`, `BookDate`, `BookTime`, `SlotID`, `Remarks`) VALUES
+(1, 0, '', 'A', '2018-11-02', '10:00-10:30', 3, ''),
+(10, 0, 'consultation', 'A', '2018-11-06', '10:00-10:30', 3, '');
 
 -- --------------------------------------------------------
 
@@ -47,21 +56,22 @@ CREATE TABLE `booking` (
 CREATE TABLE `doctors` (
   `SlotID` int(100) NOT NULL,
   `DrName` varchar(20) NOT NULL,
-  `Time` varchar(20) NOT NULL
+  `Timeslot` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `doctors`
 --
 
-INSERT INTO `doctors` (`SlotID`, `DrName`, `Time`) VALUES
+INSERT INTO `doctors` (`SlotID`, `DrName`, `Timeslot`) VALUES
 (1, 'A', '09:00-09:30'),
 (2, 'A', '09:30-10:00'),
-(4, 'A', '10:00-10:30'),
-(5, 'A', '10:30-11:00'),
-(6, 'A', '11:00-11:30'),
-(7, 'A', '11:30-12:00'),
-(8, 'A', '12:00-12:30'),
+(3, 'A', '10:00-10:30'),
+(4, 'A', '10:30-11:00'),
+(5, 'A', '11:00-11:30'),
+(6, 'A', '11:30-12:00'),
+(7, 'A', '12:00-12:30'),
+(8, 'A', '12:30-13:00'),
 (9, 'A', '14:00-14:30'),
 (10, 'A', '14:30-15:00'),
 (11, 'A', '15:00-15:30'),
@@ -150,7 +160,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `booking`
 --
 ALTER TABLE `booking`
-  MODIFY `BookID` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `BookID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `doctors`
