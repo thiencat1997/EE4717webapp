@@ -16,6 +16,7 @@
 
     $connectdb = mysqli_select_db($conn, 'booking');
 
+    $user=$_SESSION['user_id'];
     $service=$_POST['service'];
     $doctor=$_POST['doctor'];
     $date=$_POST['date'];
@@ -29,7 +30,7 @@
     while($row = mysqli_fetch_assoc($slot)) {
             $slotid[] = $row['SlotID'];
     }
-    $query = "INSERT INTO booking (Service, DrName, BookDate,BookTime, SlotID, Remarks) VALUES ('$service', '$doctor', '$date', '$time','$slotid[0]', '$remarks')";
+    $query = "INSERT INTO booking (UserID, Service, DrName, BookDate,BookTime, SlotID, Remarks) VALUES ('$user','$service', '$doctor', '$date', '$time','$slotid[0]', '$remarks')";
     $result = mysqli_query($conn, $query);
     $_SESSION['updated'] = true;
     header('location: ../booking.php');

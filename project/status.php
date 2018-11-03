@@ -8,9 +8,9 @@
   </head>
 
 <?php
-  if(!isset($_SESSION)) 
-  { 
-      session_start(); 
+  if(!isset($_SESSION))
+  {
+      session_start();
   }
   $servername = "localhost";
   $username = "f31ee";
@@ -35,8 +35,8 @@
 ?>
 
   <body>
-  <div class="banner-container-2" style="background-image: url('media/about-bg.png');">       
-    <div style="width:1500px; margin: auto" >       
+  <div class="banner-container-2" style="background-image: url('media/about-bg.png');">
+    <div style="width:1500px; margin: auto" >
       <?php include_once 'subhtml/navbar.php'; ?>
       <div class="banner-text-2">
         Appointment Status
@@ -48,7 +48,7 @@
   <div id="welcome" class="container">
       <h1>Welcome!</h1>
       <div>
-          <a class="button" href="booking.html">New Appointment</a></li>
+          <a class="button" href="booking.php">New Appointment</a></li>
           <button type="Submit" name="status" class="button">Check Status</button>
       </div>
 
@@ -69,8 +69,8 @@
                       echo "<tr>";
                       echo "<td>".$row['Service']."</td>";
                       echo "<td>".$row['DrName']."</td>";
-                      echo "<td>".$row['Date']."</td>";
-                      echo "<td>".$row['Time']."</td>";
+                      echo "<td>".$row['BookDate']."</td>";
+                      echo "<td>".$row['BookTime']."</td>";
                       echo "<td>".$row['Remarks']."</td>";
                       echo "</tr>";
                     }
@@ -80,7 +80,7 @@
                 ?>
           </table>
 
-  
+
 
 
           <input type="Submit" name="cancel" value="Cancel">
