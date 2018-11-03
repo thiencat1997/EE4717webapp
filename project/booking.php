@@ -4,31 +4,42 @@
     	<title>MedArt Clinic</title>
     	  <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="bookstyle.css">
+        <style media="screen">
+          .container {
+            position: relative;
+            height: 1.5rem;
+          }
+          .expanded + .time-picker-content {
+            display: flex;
+          }
+          .time-picker-content {
+            margin: 0;
+            list-style: none;
+            display: none;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            position: absolute;
+            width: 30vw;
+            top: 1.5rem;
+            background: #EEE;
+            padding: 1rem;
+          }
+          .time-picker-content li {
+            display: inline-block;
+            flex: 0 0 30%;
+            margin: 10px 1.5%;
+            padding: 10px;
+            background: #999;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 10px;
+            cursor: pointer;
+            user-select: none;
+          }
+        </style>
     </head>
-<?php
-    $servername = "localhost";
-    $username = "f31ee";
-    $password = "f31ee";
-    $dbname = "f31ee";
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    // Check connection
-    if (mysqli_connect_error()) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    else
-      echo "connected successfully";
-    $connectdb = mysqli_select_db($conn, 'f31ee');
-    if (isset($_POST['doctor']) && isset($_POST['date'])){
 
-    $doctor=$_POST['doctor'];
-    $date=$_POST['date'];
-    $query ="SELECT * FROM doctors d LEFT JOIN Booking b ON d.SlotID = b.SlotID WHERE d.DrName = '".$doctor."' AND b.Date = '".$date."' AND b.SlotID IS NULL;"
-    $result = mysqli_query($conn, $query);
-    }
-
-
-    ?>
+<?php include_once './php/db_connect.php'; ?>
 
     <body>
       <nav>
@@ -49,7 +60,7 @@
         <h1>Make an Appointment</h1>
       </header>
       <div class="book">
-          <form>
+          <form action="./php/submitbook.php" method="POST" id="booking_form">
             <div class="bookform">
               <div>
                 <label for="service">Service:</label>
@@ -87,14 +98,36 @@
               </div>
               <div>
                 <label for="time">Time slot:</label>
-                <select name="time" id="time">
+                <select class="time-picker" name="time" id="time">
+                  <option value="10:00-10:30">10:00-10:30</option>
+                  <option value="10:30-1100">10:30-11:00</option>
+
                   <?php
-                  while ($rows = mysql_fetch_assoc($result)){
-                      echo "<option value=". $rows['time'].";>".$rows['time'].";</option>"
+                  if (isset($_POST['doctor']) && isset($_POST['date'])){
+
+                      $doctor=$_POST['doctor'];
+                      $date=$_POST['date'];
+
+                      $query ="SELECT * FROM doctors d LEFT JOIN
+                      booking b ON d.SlotID = b.SlotID
+                      WHERE d.DrName = '".$doctor."'
+                      AND ( CAST(b.Date AS CHAR(10)) <> '".$date."' OR b.SlotID IS NULL);";
+                      $result = mysqli_query($conn, $query);
+                      //$rowcount=mysqli_num_rows($result);
+                      //$rows = mysql_fetch_assoc($result);
+                      echo '<select class="time-picker" name="time" id="time">';
+                      while ($rows = mysql_fetch_assoc($result)){
+
+                        foreach($rows['Time'] as $timeslot) {
+                              //echo '<option value=' .$rows['Time']. '>' . $rows['Time'] .'</option>';
+                              echo '<option value=' .$timeslot. '>' . $timeslot .'</option>';
+                          }
+                      }
+                      echo '</select>;'
                   }
                   ?>
                 </select>
-                <script type="text/javascript">
+                <!---<script type="text/javascript">
                   var time_picker = document.getElementById('time');
                   time_picker.addEventListener('mousedown', selectTime);
                   function init() {
@@ -118,7 +151,7 @@
                     e.target.classList.toggle('expanded');
                   }
                   init();
-                </script>
+                </script>--->
               </div>
               <div>
                 <label for="remarks">Remarks:</label>
@@ -128,81 +161,7 @@
             </div>
           </form>
       </div>
-      <div class="hero-image">
-        <div class="container" style="padding-top: 50px">
-              <div class="column">
-              <div class="column-left">
-            <ul>
-                <li ><a href="index.html" style="text-align:left">
-                  <img src="media/logo.png" height="100%" width= "100%">
-                </a> </li>
-                </ul>
-            <p>The best quality private clinic, highest technology and service level with reasonable charge. Ensure health of every customer.
-            </p>
-            </div>
-            </div>
-            <div class="column">
-              <div class="column-middle" style="padding-top: 50px">
-
-
-                <div style="border:3px solid transparent; border-radius: 40px; padding-left: 30px; height:220px">
-                  <h2 style="  display: inline-block;
-                    margin: 0;
-                    transform: translateY(-50%);
-                    background: #fff;
-                    padding: 0 .5em;">
-                    Contact
-
-
-                   </h2>
-                  <p>
-                  <table class="footerTable">
-                    <tr width=100px>
-                      <td>Addtress</td>
-                      <td>Mitlton Str. 26-27 London UK</td>
-                    </tr>
-                    <tr>
-                      <td>Phone</td>
-                      <td>+53 345 7953 32453 </td>
-                    </tr>
-                    <tr>
-                      <td>Email</td>
-                      <td>yourmail@gmail.com </td>
-                    </tr>
-                  </table>
-                  </p>
-                </div>
-            </div>
-            </div>
-            <div class="column">
-              <div class="column-right" style="padding-top: 50px">
-                <div style="border:3px solid #ccc; border-radius: 40px; padding-left: 30px; height:200px">
-                  <h2 style="  display: inline-block;
-                    margin: 0;
-                    transform: translateY(-50%);
-                    background: #fff;
-                    padding: 0 .5em;">
-                    Opening Hours
-
-
-                   </h2>
-                   <p>
-                  <table class="footerTable">
-                    <tr width=100px>
-                      <td>Monday - Friday</td>
-                      <td>5pm-7pm</td>
-                    </tr>
-                    <tr>
-                      <td>Saturday - Sunday</td>
-                      <td>5pm-7pm</td>
-                    </tr>
-                  </table>
-                  </p>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
+      <?php include_once 'subhtml/footer.php'; ?>
 
     </body>
 

@@ -13,19 +13,24 @@
     //else
     //  echo "connected successfully";
 
-    $connectdb = mysqli_select_db($conn, 'users');
+    $connectdb = mysqli_select_db($conn, 'booking');
 
     $service=$_POST['service'];
     $doctor=$_POST['doctor'];
     $date=$_POST['date'];
     $time=$_POST['time'];
     $remarks=$_POST['remarks'];
+    $slotquery = "SELECT SlotID FROM doctors WHERE DrName = '".$doctor."' AND Timeslot = '".$time."'";
 
-    $slotid = "SELECT SlotID FROM doctors WHERE DrName = '"$doctor"' AND Time = '"$time"'";
+    $slot = mysqli_query($conn, $slotquery);
 
-    $query = "INSERT INTO booking (Service, DrName, 'Date', 'Time', SlotID, Remarks) VALUES ('$service', '$doctor', '$date', '$time',$slotid, $remarks)";
-    $result = mysqli_query($conn, $query);
+    $slotid = [];
+    while($row = mysqli_fetch_assoc($slot)) {
+            $slotid[] = $row['SlotID'];
+        }
+      $query = "INSERT INTO booking (Service, DrName, BookDate,BookTime, SlotID, Remarks) VALUES ('$service', '$doctor', '$date', '$time','$slotid[0]', '$remarks')";
+      $result = mysqli_query($conn, $query);
 
-    header('location: ../status.html');
+    //header('location: ../status.html');
 
 ?>
