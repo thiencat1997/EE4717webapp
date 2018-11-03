@@ -42,17 +42,10 @@ ul{
 </style>
 
 <?php
-<<<<<<< HEAD
     if(!isset($_SESSION))
     {
         session_start();
     }
-=======
-  if(!isset($_SESSION)) 
-  { 
-      session_start(); 
-  }
->>>>>>> 0dcc14565a9314ee7cf08c9d9a0f3dfe3457a5ea
 	if(!empty($_SESSION['user'])){
 		$link = "status.php";
 		$text = "Hi, ".$_SESSION['user']."!";
@@ -75,7 +68,7 @@ ul{
 			<li ><a href="index.php" style="text-align:left; padding-top: 20px">
 				<img src="media/logo.png" height="100%" width= "100%">
 			</a> </li>
-<?php 
+<?php
 	if  ($var==1){
 		echo "
 				<li style='float:right' class='dropdown'>
@@ -103,7 +96,7 @@ ul{
 			<li style="float:right">
         <?php
         if(empty($_SESSION['user'])){
-          phpAlert();
+          //phpAlert();
           echo '<a href="javascript:void(0);">Book Appointment</a>';
         }else{
           echo '<a href="booking.php">Book Appointment</a>';}
