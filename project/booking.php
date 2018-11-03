@@ -48,10 +48,10 @@
    <header>
         <h1>Make an Appointment</h1>
       </header>
-      <div class="book">
-          <form action="./php/submitbook.php" method="POST" name="booking_form">
-            <div class="bookform">
-              <div>
+      <div class="book" >
+          <form action="./php/submitbook.php" method="POST" name="booking_form" class="bookform">
+
+              <div class="elements">
                 <label for="service">Service:</label>
                 <select name="service" id="service">
 
@@ -61,7 +61,7 @@
                     <option value="comprehensive">Comprehensive Health Exam</option>
                   </select>
                 </div>
-                <div>
+                <div class="elements">
                   <label for="doctor">Doctor:</label>
                   <select name="doctor" id="doctor">
                     <option value='' >--Select--</option>
@@ -70,7 +70,7 @@
                     <option value="C">Doctor C</option>
                   </select>
                 </div>
-                <div>
+                <div class="elements">
                   <label for="date">Date:</label>
                   <input type="date" name="date" id="date" onchange="DateCheck()"></input>
                   <script>
@@ -85,23 +85,25 @@
                 }
                 </script>
               </div>
-              <div style="position: relative">
+              <div class="elements" style="position: relative">
                 <label for="time">Time slot:</label>
                 <select class="time-picker" name="time" id="time">
                   <option value='' >--Select--</option>
                 </select>
               </div>
-              <div>
+              <div class="elements">
                 <label for="remarks">Remarks:</label>
                 <input type="textarea" name="remarks" id="remarks" placeholder="Special notice to your doctor"></input>
               </div>
-            <button type="submit" onsubmit="ShowAlert()" class="button" style="margin-left: 270px;">Submit</button>
-            </div>
+              <div class="elements">
+                <button type="submit" onsubmit="ShowAlert()" class="button" >Submit</button>
+              </div>
+
           </form>
       </div>
       <?php include_once 'subhtml/footer.php'; ?>
 <p>
-<?php echo var_dump($_COOKIE); ?>
+<?php //echo var_dump($_COOKIE); ?>
 </p>
 
   <script type="text/javascript">
