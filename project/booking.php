@@ -44,21 +44,8 @@
 <?php include_once './php/db_connect.php'; ?>
 
     <body>
-      <nav>
-        <ul>
-            <li ><a href="index.html" style="text-align:left">
-              <img src="media/logo.png" height="100%" width= "100%">
-            </a> </li>
-
-          <strong>
-            <li style="float:right">	<a href="appointment.html">Appointment</a> </li>
-            <li style="float:right">	<a href="service.html">Service</a> </li>
-            <li style="float:right">	<a href="about.html">About</a> </li>
-            <li style="float:right">	<a href="index.html">Home</a> </li>
-          </strong>
-        </ul>
-      </nav>
-      <header>
+<?php include_once 'subhtml/navbar.php'; ?>
+   <header>
         <h1>Make an Appointment</h1>
       </header>
       <div class="book">
