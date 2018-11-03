@@ -49,14 +49,15 @@
         <div style="width:1500px; margin: auto" >    
          <?php include_once 'subhtml/navbar.php'; ?>
           <div class="banner-text-2" style="width:100%">
-            Make an Appointment
+            Edit Appointment #<?php echo $_GET['id'] ?>
           </div>
         </div>
       </div>
 
     <div style="width:1500px; margin: auto;" >
       <div class="book">
-          <form action="./php/submitbook.php" method="POST" name="booking_form">
+          <form action="./php/updatebooking.php" method="POST" name="booking_form">
+            <input type="hidden" name="ID" value=" <?php echo $_GET['id']; ?>" >
             <div class="bookform">
               <div>
                 <label for="service">Service:</label>

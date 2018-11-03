@@ -93,13 +93,13 @@ ul{
 		  	</li>
 
 		<strong>
-			<li style="float:right">
+			<li style="float:right; width:300px">
         <?php
         if(empty($_SESSION['user'])){
           //phpAlert();
-          echo '<a href="javascript:void(0);">Book Appointment</a>';
+          echo '<a href="javascript:void(0);" style="width:300px;">Book Appointment</a>';
         }else{
-          echo '<a href="booking.php">Book Appointment</a>';}
+          echo '<a href="booking.php" style="width:300px;">Book Appointment</a>';}
         ?>
 
 

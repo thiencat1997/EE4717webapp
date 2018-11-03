@@ -56,29 +56,25 @@
                   <th>Date</th>
                   <th>Time</th>
                   <th>Remark</th>
-                  <th>Edit</th>
+                  <th></th>
               </tr>
                 <?php
                   if ( mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
-                      static $rowid=0;
-                      $rowid ++;
-                      echo $rowid;
                       echo "<tr>";
                       echo "<td>".$row['Service']."</td>";
                       echo "<td>".$row['DrName']."</td>";
                       echo "<td>".$row['BookDate']."</td>";
                       echo "<td>".$row['BookTime']."</td>";
                       echo "<td>".$row['Remarks']."</td>";
-                      echo "<td>
-                            <input type='checkbox' name='reschedule' value='Reschedule'>
-                            </td>";
+                      echo "<td><a href='edit.php?id=". $row['BookID'] . "'> EDIT </a></td>";
                       echo "</tr>";
 
                     }
-                  } else {
+                  } else {  
                       echo "You don't have any appointment.";
                   }
+                  $_SESSION['appointment']=$bigarray;
                 ?>
           </table>
 
@@ -88,7 +84,14 @@
       </div>
   </div>
 
-
+<script type="text/javascript">
+  function updateFunc(){
+      var i = 0;
+     // i = <?php echo $bigarray[$rowid][0]; ?>;
+     i = <?php echo '1' ?>
+      alert(i);
+  }
+</script>
 
   </body>
     <?php include_once 'subhtml/footer.php'; ?>
