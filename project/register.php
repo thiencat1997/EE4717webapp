@@ -89,10 +89,9 @@
                             $hashed_password = $row['Password'];
                             if( password_verify($password, $hashed_password) ){
                               echo "<p>login successfully</p>";
-                              $message = "success";
-                              $_SESSION['user']=$user;
-                              echo "I am = $user";
-                              echo $_SESSION['user'];
+                              $_SESSION['user']=$row['Firstname'];
+                              $_SESSION['user_id']=$row['UserID'];
+                              header("Location: status.php");
                               break;
                             } else {
                               echo"<p>invalid password!</p>";

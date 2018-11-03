@@ -159,7 +159,7 @@ h1{
 		</div>
 
 <?php include_once 'subhtml/signUpBanner.php'; ?>
-<?php include_once 'footer.php'; ?>
+<?php include_once 'subhtml/footer.php'; ?>
 
 </body>
 </html>

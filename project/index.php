@@ -8,7 +8,6 @@
 img{
 	height:100%;
 	width:100%;
-	border-radius: 20px;
 }
 
 
@@ -24,7 +23,7 @@ img{
 			<p class="">Medart Clinic is a primary healthcare clinic providing medical services for acute & chronic care, corporate healthcare, employment checkups, health screening and vaccination for adults and children. employment checkups, health screening and vaccination for adults and children.
 
 		  	</p>
-		  	<a href="about.html" class="boxhead">
+		  	<a href="about.php" class="boxhead">
 			  	<div class='button' style="width: 400px; padding:20px; margin-left: 0">
 			  		Learn more
 			  	</div>
@@ -55,7 +54,7 @@ img{
 		  <div class="column">
 		  	<div class="column-right">
 				<img src="media/news-3.png" height="100%" width= "100%">
-				<a class="boxhead" href="appointment.php"><h2>Appointment</h2></a>
+				<a class="boxhead" href="booking.php"><h2>Appointment</h2></a>
 				<p>Patients can make appointments through our website and check the status at their convenience.
 				</p>
 			  </div>
