@@ -42,7 +42,7 @@
               <h1></h1>
           </header>
           <main>
-            <div class="login">
+            <div class="login" style="margin-top: 0">
               <h2>User Login</h2>
 
                 <form action="register.php" method="POST" id="login_form">

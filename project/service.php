@@ -12,7 +12,10 @@ img{
 
 .row{
 	text-align: justify; 
-	padding-bottom: 80px;
+	padding:30px ;
+	padding-left: 100px ;
+	padding-bottom: 50px ;
+	padding-right: 100px;
 }
 
 h3{
@@ -41,13 +44,14 @@ h1{
 	</div>
 		<br>
 
-<div class="container" style="background:transparent; margin-top:50px; padding:100px; margin-bottom: 100px; color:white;
+<div class="container" style="background:transparent; margin-top:50px; padding-top: 100px;padding-bottom: 50px;
+ margin-bottom: 100px; color:white;
     background-image: linear-gradient(270deg, rgb(50, 200, 250) 0%, rgb(88, 125, 228) 100%);">
     <div style="text-align: center; padding-bottom: 50px">
 	    <h1>Our Services</h1>
 	    <p>We have a wide variety of high class equipment, capable of delivering tip top services. Lorem ipsum dolor sit amet, consectetur<br> adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus</p>
     </div>
-	<div class="row" >
+	<div class="row" style="">
 			<div class="column">
 			  	<div class="column-left">
 					<h3>

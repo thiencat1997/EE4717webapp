@@ -46,22 +46,16 @@
 
 
   <div id="welcome" class="container">
-      <h1>Welcome!</h1>
-      <div>
-          <a class="button" href="booking.html">New Appointment</a></li>
-          <button type="Submit" name="status" class="button">Check Status</button>
-      </div>
-
       <div id="details">
         <p>Booking details:</p>
         <form>
           <table id="status">
               <tr>
-                  <th>Service</th>
-                  <th>Doctor</th>
-                  <th>Date</th>
-                  <th>Time</th>
-                  <th>Remark</th>
+                <th>Service</th>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Remark</th>
               </tr>
                 <?php
                   if ( mysqli_num_rows($result) > 0) {
@@ -70,7 +64,7 @@
                       echo "<td>".$row['Service']."</td>";
                       echo "<td>".$row['DrName']."</td>";
                       echo "<td>".$row['Date']."</td>";
-                      echo "<td>".$row['Time']."</td>";
+                      echo "<td>".$row['SlotID']."</td>";
                       echo "<td>".$row['Remarks']."</td>";
                       echo "</tr>";
                     }
@@ -79,9 +73,7 @@
                   }
                 ?>
           </table>
-
-  
-
+          <a class="button" href="booking.html">New Appointment</a></li>
 
           <input type="Submit" name="cancel" value="Cancel">
           <input type="Submit" name="reschedule" value="Reschedule">
