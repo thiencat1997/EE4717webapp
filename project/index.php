@@ -47,7 +47,7 @@ img{
 		  	<div class="column-middle">
 				<img src="media/news-2.png" height="100%" width= "100%">
 			<a class="boxhead" href="service.php"><h2>Services</h2></a>
-			<p>Our services include ........
+			<p>Our services include medical consultation and prescriptions, routine medical checkup and comprehensive health exam. We fully support corporate medical examination, medical certificates and referral to the hospitals.
 			</p>
 		  </div>
 		  </div>
@@ -55,7 +55,7 @@ img{
 		  	<div class="column-right">
 				<img src="media/news-3.png" height="100%" width= "100%">
 				<a class="boxhead" href="booking.php"><h2>Appointment</h2></a>
-				<p>Patients can make appointments through our website and check the status at their convenience.
+				<p>Patients can make appointments through our website and check the status at their convenience. They can easily check and modify their appointments through our system.
 				</p>
 			  </div>
 		  </div>

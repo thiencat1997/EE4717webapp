@@ -8,29 +8,13 @@
         <script type = "text/javascript"  src = "form_validation.js" ></script>
     </head>
 <?php
-    session_start();
-    $servername = "localhost";
-    $username = "f31ee";
-    $password = "f31ee";
-    $dbname = "f31ee";
-
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
-    // Check connection
-    if (mysqli_connect_error()) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    //else
-    //  echo "connected successfully";
-
-    $connectdb = mysqli_select_db($conn, 'users');
-
+  include_once './php/db_connect.php';
 ?>
 
 
     <body>
-      <div class="banner-container-2" style="background-image: url('media/about-bg.png');">   
-        <div style="width:1500px; margin: auto" >    
+      <div class="banner-container-2" style="background-image: url('media/about-bg.png');">
+        <div style="width:1500px; margin: auto" >
          <?php include_once 'subhtml/navbar.php'; ?>
           <div class="banner-text-2" style="width:100%">
             Membership Sign In/Up Form
