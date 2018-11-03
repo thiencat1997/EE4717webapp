@@ -34,7 +34,7 @@ ul{
     padding: 15px 15px;
     text-decoration: none;
     display: block;
-    text-align: left;
+    text-align: right;
     width: 270px;
 }
 

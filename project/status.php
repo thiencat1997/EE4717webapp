@@ -74,7 +74,6 @@
                   } else {  
                       echo "You don't have any appointment.";
                   }
-                  $_SESSION['appointment']=$bigarray;
                 ?>
           </table>
 
