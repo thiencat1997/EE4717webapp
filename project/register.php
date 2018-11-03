@@ -8,7 +8,7 @@
         <script type = "text/javascript"  src = "form_validation.js" ></script>
     </head>
 <?php
-  include_once './db_connect.php';
+  include_once './php/db_connect.php';
 ?>
 
 
