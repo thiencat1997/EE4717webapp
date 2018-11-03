@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $servername = "localhost";
     $username = "f31ee";
     $password = "f31ee";
@@ -27,10 +28,9 @@
     $slotid = [];
     while($row = mysqli_fetch_assoc($slot)) {
             $slotid[] = $row['SlotID'];
-        }
-      $query = "INSERT INTO booking (Service, DrName, BookDate,BookTime, SlotID, Remarks) VALUES ('$service', '$doctor', '$date', '$time','$slotid[0]', '$remarks')";
-      $result = mysqli_query($conn, $query);
-
-    //header('location: ../status.html');
-
+    }
+    $query = "INSERT INTO booking (Service, DrName, BookDate,BookTime, SlotID, Remarks) VALUES ('$service', '$doctor', '$date', '$time','$slotid[0]', '$remarks')";
+    $result = mysqli_query($conn, $query);
+    $_SESSION['updated'] = true;
+    header('location: ../booking.php');
 ?>
