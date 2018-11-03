@@ -8,9 +8,9 @@
   </head>
 
 <?php
-  if(!isset($_SESSION)) 
-  { 
-      session_start(); 
+  if(!isset($_SESSION))
+  {
+      session_start();
   }
   $servername = "localhost";
   $username = "f31ee";
@@ -35,8 +35,8 @@
 ?>
 
   <body>
-  <div class="banner-container-2" style="background-image: url('media/about-bg.png');">       
-    <div style="width:1500px; margin: auto" >       
+  <div class="banner-container-2" style="background-image: url('media/about-bg.png');">
+    <div style="width:1500px; margin: auto" >
       <?php include_once 'subhtml/navbar.php'; ?>
       <div class="banner-text-2">
         Appointment Status
@@ -46,16 +46,22 @@
 
 
   <div id="welcome" class="container">
+      <h1>Welcome!</h1>
+      <div>
+          <a class="button" href="booking.php">New Appointment</a></li>
+          <button type="Submit" name="status" class="button">Check Status</button>
+      </div>
+
       <div id="details">
         <p>Booking details:</p>
         <form>
           <table id="status">
               <tr>
-                <th>Service</th>
-                <th>Doctor</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Remark</th>
+                  <th>Service</th>
+                  <th>Doctor</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Remark</th>
               </tr>
                 <?php
                   if ( mysqli_num_rows($result) > 0) {
@@ -63,8 +69,8 @@
                       echo "<tr>";
                       echo "<td>".$row['Service']."</td>";
                       echo "<td>".$row['DrName']."</td>";
-                      echo "<td>".$row['Date']."</td>";
-                      echo "<td>".$row['SlotID']."</td>";
+                      echo "<td>".$row['BookDate']."</td>";
+                      echo "<td>".$row['BookTime']."</td>";
                       echo "<td>".$row['Remarks']."</td>";
                       echo "</tr>";
                     }
@@ -73,7 +79,9 @@
                   }
                 ?>
           </table>
-          <a class="button" href="booking.html">New Appointment</a></li>
+
+
+
 
           <input type="Submit" name="cancel" value="Cancel">
           <input type="Submit" name="reschedule" value="Reschedule">

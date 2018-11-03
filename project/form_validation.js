@@ -1,10 +1,10 @@
 function form_validate() {
     FirstNameCheck();
-	LastNameCheck();
-	UsernameCheck();
+	  LastNameCheck();
+	  UsernameCheck();
     EmailCheck();
     PwdCheck();
-	PhoneCheck();
+	  PhoneCheck();
 }
 
 function FirstNameCheck(){
