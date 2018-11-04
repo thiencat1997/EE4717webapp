@@ -35,7 +35,7 @@
 ?>
 
   <body>
-  <div class="banner-container-2" style="background-image: url('media/about-bg.png');">
+  <div class="banner-container-2" style="background-image: url('media/service-bg.png');">
     <div style="width:1500px; margin: auto" >
       <?php include_once 'subhtml/navbar.php'; ?>
       <div class="banner-text-2">
@@ -57,6 +57,7 @@
                   <th>Time</th>
                   <th>Remark</th>
                   <th></th>
+                  <th></th>
               </tr>
                 <?php
                   if ( mysqli_num_rows($result) > 0) {
@@ -67,7 +68,8 @@
                       echo "<td>".$row['BookDate']."</td>";
                       echo "<td>".$row['BookTime']."</td>";
                       echo "<td>".$row['Remarks']."</td>";
-                      echo "<td><a href='edit.php?id=". $row['BookID'] . "'> EDIT </a></td>";
+                      echo "<td><a href='edit.php?id=". $row['BookID'] . "'> EDIT </a> </td>";
+                      echo "<td> <a href='php/cancel.php?id=". $row['BookID'] . "'> DELETE </a></td>";
                       echo "</tr>";
 
                     }

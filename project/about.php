@@ -12,7 +12,7 @@ img{
 </style>
 <body>
 		
-	<div class="banner-container-2" style="background-image: url('media/about-bg.png');">		
+	<div class="banner-container-2" style="background-image: url('media/news-bg.png');">		
 		<div style="width:1500px; margin: auto" >		
 		  <?php include_once 'subhtml/navbar.php'; ?>
 		  <div class="banner-text-2">

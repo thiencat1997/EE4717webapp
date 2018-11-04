@@ -6,10 +6,6 @@
     	  <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="bookstyle.css">
         <style media="screen">
-          .container {
-            position: relative;
-            height: 1.5rem;
-          }
           .expanded + .time-picker-content {
             display: flex;
           }
@@ -45,6 +41,7 @@
 
     <body>
 
+
       <div class="banner-container-2" style="background-image: url('media/about-bg.png');">   
         <div style="width:1500px; margin: auto" >    
          <?php include_once 'subhtml/navbar.php'; ?>
@@ -59,6 +56,12 @@
           <form action="./php/submitbook.php" method="POST" name="booking_form">
             <div class="bookform">
               <div>
+
+<?php include_once 'subhtml/navbar.php'; ?>
+      <div class="book" >
+          <form action="./php/submitbook.php" method="POST" name="booking_form" class="bookform">
+
+              <div class="elements">
                 <label for="service">Service:</label>
                 <select name="service" id="service">
 
@@ -68,7 +71,7 @@
                     <option value="comprehensive">Comprehensive Health Exam</option>
                   </select>
                 </div>
-                <div>
+                <div class="elements">
                   <label for="doctor">Doctor:</label>
                   <select name="doctor" id="doctor">
                     <option value='' >--Select--</option>
@@ -77,7 +80,7 @@
                     <option value="C">Doctor C</option>
                   </select>
                 </div>
-                <div>
+                <div class="elements">
                   <label for="date">Date:</label>
                   <input type="date" name="date" id="date" onchange="DateCheck()"></input>
                   <script>
@@ -92,13 +95,13 @@
                 }
                 </script>
               </div>
-              <div style="position: relative">
+              <div class="elements" style="position: relative">
                 <label for="time">Time slot:</label>
                 <select class="time-picker" name="time" id="time">
                   <option value='' >--Select--</option>
                 </select>
               </div>
-              <div>
+              <div class="elements">
                 <label for="remarks">Remarks:</label>
                 <input type="textarea" name="remarks" id="remarks" placeholder="Special notice to your doctor"></input>
               </div>
@@ -112,7 +115,7 @@
     </div>
       <?php include_once 'subhtml/footer.php'; ?>
 <p>
-<?php echo var_dump($_COOKIE); ?>
+<?php //echo var_dump($_COOKIE); ?>
 </p>
 
   <script type="text/javascript">
