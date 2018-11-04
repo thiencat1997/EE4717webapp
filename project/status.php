@@ -3,8 +3,8 @@
   <head>
       <title>Check Booking Status</title>
       <meta charset="utf-8">
-      <link rel="stylesheet" href="styles.css">
-      <link rel="stylesheet" href="registerstyle.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/registerstyle.css">
       <style type="text/css">
   
       </style>

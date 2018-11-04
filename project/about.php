@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>MedArt Clinic</title>	
-	  <link rel="stylesheet" href="styles.css">
+	  <link rel="stylesheet" href="css/styles.css">
 </head>
 <style>
 img{

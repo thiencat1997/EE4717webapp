@@ -3,8 +3,8 @@
 <html>
     <head>
     	<title>MedArt Clinic</title>
-    	  <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="bookstyle.css">
+    	  <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/bookstyle.css">
         <style media="screen">
           .expanded + .time-picker-content {
             display: flex;

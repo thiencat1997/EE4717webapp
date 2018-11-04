@@ -3,8 +3,8 @@
     <head>
         <title>User Login/register</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="registerstyle.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/registerstyle.css">
         <script type = "text/javascript"  src = "form_validation.js" ></script>
     </head>
 <?php
