@@ -45,8 +45,8 @@
 
     <body>
 
-      <div class="banner-container-2" style="background-image: url('media/about-bg.png');">   
-        <div style="width:1500px; margin: auto" >    
+      <div class="banner-container-2" style="background-image: url('media/about-bg.png');">
+        <div style="width:1500px; margin: auto" >
          <?php include_once 'subhtml/navbar.php'; ?>
           <div class="banner-text-2" style="width:100%">
             Make an Appointment
@@ -103,7 +103,7 @@
                 <input type="textarea" name="remarks" id="remarks" placeholder="Special notice to your doctor"></input>
               </div>
               <div>
-                <button type="submit" onsubmit="ShowAlert()" class="button" 
+                <button type="submit" onsubmit="ShowAlert()" class="button"
                 style="width:300px;padding:10px;margin-left: 500px">Submit</button>
               </div>
             </div>
@@ -112,7 +112,7 @@
     </div>
       <?php include_once 'subhtml/footer.php'; ?>
 <p>
-<?php echo var_dump($_COOKIE); ?>
+<?php //echo var_dump($_COOKIE); ?>
 </p>
 
   <script type="text/javascript">
