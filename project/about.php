@@ -36,40 +36,40 @@ img{
 
 <div class="banner-container-2" style="background-image: none;height:1100px;background-color:#EDF2F6">
 <div class="container" style="padding:50px">
-	    <h1>Our doctors</h1><br/><br>	
-		<div class="row">
-			<div class="column">
-			  	<div class="column-left">
-					<img src="media/team-1.png">
-		    <p style="text-align: center; font-size: 30px;margin-bottom: 0">Pan XingMeng</p><br/>	
-				<p style="margin:0">PhD Surgeon. <br>Head of ENT Department of ABC hospital <br>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus
-				</p>
-				</div>
-			  </div>
-			  <div class="column">
-			  	<div class="column-middle">
-					<img src="media/team-2.jpg" height="100%" width= "100%">
-		    <p style="text-align: center; font-size: 30px; margin-bottom: 0">Pan XingMeng 2</p><br/>	
-				<p style="margin:0">PhD Surgeon. <br>Head of ENT Department of ABC hospital<br>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus
-				</p>
-			  </div>
-			  </div>
-			  <div class="column">
-			  	<div class="column-right">
-					<img src="media/team-3.jpg" height="100%" width= "100%">
-		    <p style="text-align: center; font-size: 30px;margin-bottom: 0">Cat Le</p><br/>	
+    <h1>Our doctors</h1><br/><br>	
+	<div class="row">
+		<div class="column">
+		  	<div class="column-left">
+				<img src="media/team-1.png">
+	    <p style="text-align: center; font-size: 30px;margin-bottom: 0">Pan XingMeng</p><br/>	
+			<p style="margin:0">PhD Surgeon. <br>Head of ENT Department of ABC hospital <br>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus
+			</p>
+			</div>
+		  </div>
+		  <div class="column">
+		  	<div class="column-middle">
+				<img src="media/team-2.jpg" height="100%" width= "100%">
+	    <p style="text-align: center; font-size: 30px; margin-bottom: 0">Pan XingMeng 2</p><br/>	
+			<p style="margin:0">PhD Surgeon. <br>Head of ENT Department of ABC hospital<br>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus
+			</p>
+		  </div>
+		  </div>
+		  <div class="column">
+		  	<div class="column-right">
+				<img src="media/team-3.jpg" height="100%" width= "100%">
+	    <p style="text-align: center; font-size: 30px;margin-bottom: 0">Cat Le</p><br/>	
 
-				<p style="margin:0">PhD Surgeon. <br>Head of ENT Department of ABC hospital <br>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus
-					</p>
-				  </div>
+			<p style="margin:0">PhD Surgeon. <br>Head of ENT Department of ABC hospital <br>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus
+				</p>
 			  </div>
-		</div>
+		  </div>
+	</div>
 
-		</div>
-		</div>
+	</div>
+	</div>
 
 
 
