@@ -38,6 +38,21 @@
             cursor: pointer;
             user-select: none;
           }
+          .bookform{
+            margin-top: 30px;
+            padding-left: 500px;
+            width: 95%;
+            background: #fff;
+            border-radius: 2px;
+            padding: 2rem 2rem 5rem;
+            box-shadow: 1px 0 50px rgba(0, 0, 0, 0.1);
+          }
+          .elements{
+  align-items: center;
+  width:2000px;
+  margin-left:400px;
+  margin-top: 20px;
+}
         </style>
     </head>
 
@@ -59,7 +74,7 @@
           <form action="./php/updatebooking.php" method="POST" name="booking_form">
             <input type="hidden" name="ID" value=" <?php echo $_GET['id']; ?>" >
             <div class="bookform">
-              <div>
+              <div class="elements">
                 <label for="service">Service:</label>
                 <select name="service" id="service">
 
@@ -69,7 +84,7 @@
                     <option value="comprehensive">Comprehensive Health Exam</option>
                   </select>
                 </div>
-                <div>
+                <div class="elements" >
                   <label for="doctor">Doctor:</label>
                   <select name="doctor" id="doctor">
                     <option value='' >--Select--</option>
@@ -78,7 +93,7 @@
                     <option value="C">Doctor C</option>
                   </select>
                 </div>
-                <div>
+                <div class="elements">
                   <label for="date">Date:</label>
                   <input type="date" name="date" id="date" onchange="DateCheck()"></input>
                   <script>
@@ -93,28 +108,25 @@
                 }
                 </script>
               </div>
-              <div style="position: relative">
+              <div class="elements" style="position: relative">
                 <label for="time">Time slot:</label>
                 <select class="time-picker" name="time" id="time">
                   <option value='' >--Select--</option>
                 </select>
               </div>
-              <div>
+              <div class="elements">
                 <label for="remarks">Remarks:</label>
                 <input type="textarea" name="remarks" id="remarks" placeholder="Special notice to your doctor"></input>
               </div>
               <div>
                 <button type="submit" onsubmit="ShowAlert()" class="button" 
-                style="width:300px;padding:10px;margin-left: 500px">Submit</button>
+                style="width:300px;padding:10px;margin-left: 550px">Submit</button>
               </div>
             </div>
           </form>
       </div>
     </div>
       <?php include_once 'subhtml/footer.php'; ?>
-<p>
-<?php echo var_dump($_COOKIE); ?>
-</p>
 
   <script type="text/javascript">
     <?php
