@@ -49,17 +49,9 @@
           </div>
         </div>
       </div>
-
-    <div style="width:1500px; margin: auto;" >
-      <div class="book">
-          <form action="./php/submitbook.php" method="POST" name="booking_form">
-            <div class="bookform">
-              <div>
-
-<?php include_once 'subhtml/navbar.php'; ?>
-      <div class="book" >
+    <div style="width:1500px; margin: auto">
           <form action="./php/submitbook.php" method="POST" name="booking_form" class="bookform">
-
+          <div style="margin:auto">
               <div class="elements">
                 <label for="service">Service:</label>
                 <select name="service" id="service">
@@ -106,60 +98,56 @@
               </div>
               <div>
                 <button type="submit" onsubmit="ShowAlert()" class="button"
-                style="width:300px;padding:10px;margin-left: 500px">Submit</button>
+                style="width:300px;padding:10px;margin-left: 550px">Submit</button>
               </div>
             </div>
           </form>
       </div>
-    </div>
-      <?php include_once 'subhtml/footer.php'; ?>
-<p>
-<?php //echo var_dump($_COOKIE); ?>
-</p>
+<?php include_once 'subhtml/footer.php'; ?>
 
-  <script type="text/javascript">
-    <?php
-    if(isset($_SESSION['updated'])) {
-      unset($_SESSION['updated']);
-      echo "alert('Submitted');
-      location.href = 'status.php';";
-    };
-     ?>
-    var form = document.forms['booking_form'];
-    var time_picker = form.time;
-    form.date.addEventListener('change', updateSelect);
-    form.doctor.addEventListener('change', updateSelect);
-    time_picker.addEventListener('mousedown', selectTime);
+<script type="text/javascript">
+  <?php
+  if(isset($_SESSION['updated'])) {
+    unset($_SESSION['updated']);
+    echo "alert('Submitted');
+    location.href = 'status.php';";
+  };
+   ?>
+  var form = document.forms['booking_form'];
+  var time_picker = form.time;
+  form.date.addEventListener('change', updateSelect);
+  form.doctor.addEventListener('change', updateSelect);
+  time_picker.addEventListener('mousedown', selectTime);
 
-    async function updateSelect() {
-      if (!form.date.value || !form.doctor.value)
-        return;
+  async function updateSelect() {
+    if (!form.date.value || !form.doctor.value)
+      return;
 
-      var dropdown = document.createElement('ul');
-      dropdown.classList.add('time-picker-content');
-      var dropdown_content = '';
-      var select_content = '';
+    var dropdown = document.createElement('ul');
+    dropdown.classList.add('time-picker-content');
+    var dropdown_content = '';
+    var select_content = '';
 
-      var req = await fetch(`./php/get_options.php?doctor=${form.doctor.value}&date=${form.date.value}`);
-      var timeslots = await req.json();
-      timeslots = timeslots.filter((v, i, a) => a.indexOf(v) == i).sort();
-      for(var i=0; i<timeslots.length; i++) {
-        select_content += `<option value='${timeslots[i]}'>${timeslots[i]}</option>`
-        dropdown_content += `<li data-value='${timeslots[i]}' onclick='updateTime(this)'>${timeslots[i]}</li>`;
-      }
-      time_picker.innerHTML = select_content;
-      dropdown.innerHTML = dropdown_content;
-      time_picker.insertAdjacentElement('afterend', dropdown);
-      // selectTime.innerHTML = '';
+    var req = await fetch(`./php/get_options.php?doctor=${form.doctor.value}&date=${form.date.value}`);
+    var timeslots = await req.json();
+    timeslots = timeslots.filter((v, i, a) => a.indexOf(v) == i).sort();
+    for(var i=0; i<timeslots.length; i++) {
+      select_content += `<option value='${timeslots[i]}'>${timeslots[i]}</option>`
+      dropdown_content += `<li data-value='${timeslots[i]}' onclick='updateTime(this)'>${timeslots[i]}</li>`;
     }
-    function updateTime(option) {
-      time_picker.value = option.dataset.value;
-      time_picker.classList.toggle('expanded');
-    }
-    function selectTime(e) {
-      e.preventDefault();
-      e.target.classList.toggle('expanded');
-    }
-  </script>
+    time_picker.innerHTML = select_content;
+    dropdown.innerHTML = dropdown_content;
+    time_picker.insertAdjacentElement('afterend', dropdown);
+    // selectTime.innerHTML = '';
+  }
+  function updateTime(option) {
+    time_picker.value = option.dataset.value;
+    time_picker.classList.toggle('expanded');
+  }
+  function selectTime(e) {
+    e.preventDefault();
+    e.target.classList.toggle('expanded');
+  }
+</script>
     </body>
 </html>

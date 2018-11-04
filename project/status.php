@@ -5,6 +5,9 @@
       <meta charset="utf-8">
       <link rel="stylesheet" href="styles.css">
       <link rel="stylesheet" href="registerstyle.css">
+      <style type="text/css">
+  
+      </style>
   </head>
 
 <?php
