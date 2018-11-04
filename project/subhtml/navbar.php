@@ -75,10 +75,17 @@ ul{
 			    <a href='javascript:void(0)' class='dropbtn button' style='padding: 15px; width: 200px;margin-right: 0'>
 			    $text
 			    </a>
-			    <div class='dropdown-content'>
-			      <a href='$link'>Appoinment Status</a>
-			      <a href='logout.php'>Log Out</a>
-			    </div>
+			    <div class='dropdown-content'>"	;
+		if( $_SESSION['username'] == 'admin'){
+			echo " <a href='admin.php'> Admin Page </a>";
+		} else{
+			echo "<a href='$link'>Appoinment Status</a>";	
+		}
+
+			echo "      <a href='logout.php'>Log Out</a>";
+
+
+		echo "	</div>
 			  </li>
 		";
 	} else {

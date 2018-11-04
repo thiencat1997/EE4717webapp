@@ -74,6 +74,7 @@
                             if( password_verify($password, $hashed_password) ){
                               echo "<p>login successfully</p>";
                               $_SESSION['user']=$row['Firstname'];
+                              $_SESSION['username']=$row['Username'];
                               $_SESSION['user_id']=$row['UserID'];
                               header("Location: status.php");
                               break;
