@@ -41,7 +41,6 @@
 
     <body>
 
-
       <div class="banner-container-2" style="background-image: url('media/about-bg.png');">   
         <div style="width:1500px; margin: auto" >    
          <?php include_once 'subhtml/navbar.php'; ?>
@@ -106,7 +105,7 @@
                 <input type="textarea" name="remarks" id="remarks" placeholder="Special notice to your doctor"></input>
               </div>
               <div>
-                <button type="submit" onsubmit="ShowAlert()" class="button" 
+                <button type="submit" onsubmit="ShowAlert()" class="button"
                 style="width:300px;padding:10px;margin-left: 500px">Submit</button>
               </div>
             </div>
