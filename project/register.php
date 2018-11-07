@@ -51,22 +51,7 @@
                         $hash= password_hash( $password , PASSWORD_DEFAULT );
                         $query="select * from users where Username='$user'";
                         $run=mysqli_query($conn,$query);
-                        /*
-                        if( password_verify($password, $hashed_password) )
-                        if(mysqli_num_rows($run)>0) {
-                            echo"<p>login successfully</p>";
-                            //echo "<script> window.open('index.php','_self')</script>";
-                            $message = "success";
-                            //echo "<script type='text/javascript'>alert('$message');</script>";
-                            //header("Location: ../status.html");
-                            $_SESSION['user']=$user;
-                        } else {
-                            echo"<p>invalid username or password!</p>";
-                            $message = "No";
-                            //echo "<script type='text/javascript'>alert('$message');</script>";
-                            //header("Location: ../register.php");
-                        }
-                        */
+
                         if ( mysqli_num_rows($run) > 0) {
                           // output data of each row
                           while($row = mysqli_fetch_assoc($run)) {

@@ -1,7 +1,10 @@
 <?php
 
     include_once './db_connect.php';
-
+    if(!isset($_SESSION))
+    {
+        session_start();
+    }
     $user=$_SESSION['user_id'];
     $service=$_POST['service'];
     $doctor=$_POST['doctor'];

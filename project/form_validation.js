@@ -118,14 +118,3 @@ function PhoneCheck(){
 function ShowAlert(){
   alert("Submitted!");
 }
-
-/*function StartDateCheck(){
-    var date = Date.parse(document.getElementById('start_date').value);
-    var now = new Date();
-
-    if (date < now){
-        alert("Please enter a future date");
-        return false;
-    }
-}
-*/
