@@ -43,3 +43,55 @@ label {
 h1{
   margin-left: 5%;
 }
+
+
+.expanded + .time-picker-content {
+	display: flex;
+}
+.time-picker-content {
+	margin: 0;
+	list-style: none;
+	display: none;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	position: absolute;
+	width: 560px;
+	top: 6.5rem;
+	background: #e4f1fe;
+	padding: 1rem;
+	z-index: 1000;
+}
+.time-picker-content li {
+	display: inline-block;
+	flex: 0 0 30%;
+	margin: 10px 1.5%;
+	padding: 10px;
+	background: #59abe3;
+	box-sizing: border-box;
+	border-style: solid;
+	border-color: white;
+	border-width: 1px;
+	text-align: center;
+	color:white;
+	font-size: 20px;
+	cursor: pointer;
+	user-select: none;
+	border-radius: 20px;
+}
+.time-picker-content li:hover {
+	display: inline-block;
+	flex: 0 0 30%;
+	margin: 10px 1.5%;
+	padding: 10px;
+	background: #e4f1fe;
+	box-sizing: border-box;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #59abe3;
+	color:#59abe3;
+	font-size: 20px;
+	cursor: pointer;
+	user-select: none;
+	border-radius: 20px;
+}

@@ -56,6 +56,9 @@ ul{
 		$text = "Login";
 		$var =0;
 	}
+  function phpAlert() {
+    echo '<script type="text/javascript">alert("Please login first!")</script>';
+  }
 
 ?>
 
@@ -76,7 +79,7 @@ ul{
 		if( $_SESSION['username'] == 'admin'){
 			echo " <a href='admin.php'> Admin Page </a>";
 		} else{
-			echo "<a href='$link'>Appoinment Status</a>";
+			echo "<a href='$link'>Appoinment Status</a>";	
 		}
 
 			echo "      <a href='logout.php'>Log Out</a>";
@@ -100,10 +103,13 @@ ul{
 			<li style="float:right; width:300px">
         <?php
         if(empty($_SESSION['user'])){
+          //phpAlert();
           echo '<a href="javascript:void(0);" style="width:300px;">Book Appointment</a>';
         }else{
           echo '<a href="booking.php" style="width:300px;">Book Appointment</a>';}
         ?>
+
+
 
       </li>
 			<li style="float:right">	<a href="service.php">Service</a> </li>

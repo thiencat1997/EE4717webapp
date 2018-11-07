@@ -87,6 +87,7 @@
 
           <p style="text-align: center;" ><a class="button" href="booking.php" style=" width: 500px;">New Appointment</a></p>
         </form>
+		<br/>
       </div>
   </div>
 

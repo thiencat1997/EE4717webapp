@@ -59,8 +59,8 @@
                   <th>Date</th>
                   <th>Time</th>
                   <th>Remark</th>
-                  <th></th>
-                  <th></th>
+                  <th>Edit</th>
+                  <th>Cancel</th>
               </tr>
                 <?php
                   if ( mysqli_num_rows($result) > 0) {
@@ -85,6 +85,7 @@
 
           <p style="text-align: center;" ><a class="button" href="booking.php" style=" width: 500px;">New Appointment</a></p>
         </form>
+		<br/>
       </div>
   </div>
 

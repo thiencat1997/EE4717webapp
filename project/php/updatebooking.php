@@ -38,5 +38,8 @@
     echo $query;
     $result = mysqli_query($conn, $query);
     echo "Affected rows: " . mysqli_affected_rows($conn);
-    header('location: ../status.php');
+	if( $_SESSION['username'] == 'admin'){		
+		header('location: ../admin.php');
+	}
+	header('location: ../status.php');
 ?>

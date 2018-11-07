@@ -6,47 +6,6 @@
     	  <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/bookstyle.css">
         <style media="screen">
-          .container {
-            position: relative;
-            height: 1.5rem;
-          }
-          .expanded + .time-picker-content {
-            display: flex;
-          }
-          .time-picker-content {
-            margin: 0;
-            list-style: none;
-            display: none;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            position: absolute;
-            width: 40vw;
-            top: 6.5rem;
-            background: #EEE;
-            padding: 1rem;
-            z-index: 1000;
-          }
-          .time-picker-content li {
-            display: inline-block;
-            flex: 0 0 30%;
-            margin: 10px 1.5%;
-            padding: 10px;
-            background: #999;
-            box-sizing: border-box;
-            text-align: center;
-            font-size: 10px;
-            cursor: pointer;
-            user-select: none;
-          }
-          .bookform{
-            margin-top: 30px;
-            padding-left: 500px;
-            width: 95%;
-            background: #fff;
-            border-radius: 2px;
-            padding: 2rem 2rem 5rem;
-            box-shadow: 1px 0 50px rgba(0, 0, 0, 0.1);
-          }
           .elements{
   align-items: center;
   width:2000px;
@@ -69,9 +28,9 @@
         </div>
       </div>
 
-    <div style="width:1500px; margin: auto;" >
-      <div class="book">
-          <form action="./php/updatebooking.php" method="POST" name="booking_form">
+    <div style="width:1500px; margin: auto; height:1000px" >
+      <div class="book" style="height:800px">
+          <form action="./php/updatebooking.php" method="POST" name="booking_form" style="height:800px">
             <input type="hidden" name="ID" value=" <?php echo $_GET['id']; ?>" >
             <div class="bookform">
               <div class="elements">
@@ -86,7 +45,7 @@
                 </div>
                 <div class="elements" >
                   <label for="doctor">Doctor:</label>
-                  <select name="doctor" id="doctor">
+                  <select name="doctor" id="doctor" required>
                     <option value='' >--Select--</option>
                     <option value="A">Doctor A</option>
                     <option value="B">Doctor B</option>
@@ -95,7 +54,7 @@
                 </div>
                 <div class="elements">
                   <label for="date">Date:</label>
-                  <input type="date" name="date" id="date" onchange="DateCheck()"></input>
+                  <input type="date" name="date" id="date" onchange="DateCheck()" required></input>
                   <script>
                   function DateCheck(){
                       var date = Date.parse(document.getElementById('date').value);
@@ -110,7 +69,7 @@
               </div>
               <div class="elements" style="position: relative">
                 <label for="time">Time slot:</label>
-                <select class="time-picker" name="time" id="time">
+                <select class="time-picker" name="time" id="time" required>
                   <option value='' >--Select--</option>
                 </select>
               </div>

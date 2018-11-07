@@ -19,7 +19,7 @@
 		  			<h2 style="  display: inline-block;
 						  margin: 0;
 						  transform: translateY(-50%);
-						  background: #fff;
+						  background: #e4f1fe;
 						  padding: 0 .5em;">
   						Contact
 
@@ -37,7 +37,7 @@
 			  			</tr>
 			  			<tr>
 			  				<td>Email</td>
-			  				<td>yourmail@gmail.com </td>
+			  				<td><a href="mailto:f31ee@localhost" style="color: black;text-decoration: underline;">f31ee@localhost</a> </td>
 			  			</tr>
 			  		</table>
 			  		</p>
@@ -50,7 +50,7 @@
 		  			<h2 style="  display: inline-block;
 						  margin: 0;
 						  transform: translateY(-50%);
-						  background: #fff;
+						  background: #e4f1fe;
 						  padding: 0 .5em;">
   						Opening Hours
 
