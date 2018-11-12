@@ -39,15 +39,18 @@
                         <label for="password">Password:</label>
                         <input type="password" name="password" id="password" required></input>
                       </div>
-                      <a href="#">Forgot password?</a><br>
-                      <a href="#">Forgot username?</a><br>
-                      Remember me <input type="checkbox" checked="checked" name="remember" ></input><br>
                       <button type="submit" onsubmit="ShowAlert()" class="button" style="float: right">Login</button>
                       <?php
+						function test_input($data) {
+						  $data = trim($data);
+						  $data = stripslashes($data);
+						  $data = htmlspecialchars($data);
+						  return $data;
+						}
 
                       if (isset($_POST['user']) && isset($_POST['password'])){
-                        $user=$_POST['user'];
-                        $password=$_POST['password'];
+                        $user=test_input( $_POST['user'] );
+                        $password=test_input( $_POST['password'] );
                         $hash= password_hash( $password , PASSWORD_DEFAULT );
                         $query="select * from users where Username='$user'";
                         $run=mysqli_query($conn,$query);
@@ -61,7 +64,11 @@
                               $_SESSION['user']=$row['Firstname'];
                               $_SESSION['username']=$row['Username'];
                               $_SESSION['user_id']=$row['UserID'];
-                              header("Location: status.php");
+							  if( $_SESSION['username'] == 'admin'){
+								header("Location: admin.php");								  
+							  } else {
+                              header("Location: status.php");								  
+							  }
                               break;
                             } else {
                               echo"<p>invalid password!</p>";
